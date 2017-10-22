@@ -16,10 +16,13 @@ public class Game extends Canvas implements  Runnable {
 
         Random r = new Random();
 
-        //handler.addObject(new RectangleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 40, 60,  handler, 0));
-       // handler.addObject(new RectangleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 50, 200, handler, 2));
-        handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 60, handler, 1));
-        handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 40, handler, 0));
+        handler.addObject(new RectangleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 40, 60,  handler, 0));
+        handler.addObject(new RectangleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 50, 200, handler, 0));
+        for(int i = 0; i< 5; i++) {
+            handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 80, handler, 1));
+            handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 40, handler, 0));
+        }
+        handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 10, handler, 0));
 
         // for (int i = 1; i < 15; i++) {
         //      handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 10+i*3, handler, 0));

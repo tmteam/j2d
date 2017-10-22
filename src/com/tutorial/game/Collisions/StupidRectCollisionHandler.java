@@ -9,7 +9,7 @@ public class StupidRectCollisionHandler {
     public static final int  offset = 0;
 
 
-    public  void Collide(GameObject origin, GameObject target){
+    public  double Collide(GameObject origin, GameObject target){
 
         Rectangle targetBounds = target.getBounds();
         Rectangle originBounds = origin.getBounds();
@@ -31,9 +31,9 @@ public class StupidRectCollisionHandler {
                 double h = originBounds.getMaxY() - target.getY();
                 double w = originBounds.getMaxX() - target.getX();
                 if(h>w)
-                    RightCollision(origin, target);
+                    return  RightCollision(origin, target);
                 else
-                    BottomCollision(origin, target);
+                    return  BottomCollision(origin, target);
             }
             else if(dy<0)
             {
@@ -41,12 +41,12 @@ public class StupidRectCollisionHandler {
                 double w = originBounds.getMaxX() - target.getX();
 
                 if(h>w)
-                    RightCollision(origin, target);
+                    return  RightCollision(origin, target);
                 else
-                    TopCollision(origin,target);
+                    return  TopCollision(origin,target);
             }
             else{
-                RightCollision(origin, target);
+                return  RightCollision(origin, target);
             }
         } else if (dx <0){
             //top bottom left
@@ -56,9 +56,9 @@ public class StupidRectCollisionHandler {
                 double w = targetBounds.getMaxX() - origin.getX();
                 //bottom or left
                 if(h>w)
-                    LeftCollision(origin, target);
+                    return  LeftCollision(origin, target);
                 else
-                    BottomCollision(origin, target);
+                    return   BottomCollision(origin, target);
             }
             else if(dy<0) {
                 //top or left
@@ -66,39 +66,44 @@ public class StupidRectCollisionHandler {
                 double w =  targetBounds.getMaxX() - origin.getX();
 
                 if (h < w)
-                    TopCollision(origin,target);
+                    return  TopCollision(origin,target);
                 else
-                    LeftCollision(origin,  target);
+                    return  LeftCollision(origin,  target);
             }
         }
         else{
             if(dy>0)
-                BottomCollision(origin, target);
+                return   BottomCollision(origin, target);
             else if(dy<0)
-                TopCollision(origin,target);
+              return   TopCollision(origin,target);
         }
+        return 0;
     }
 
 
-    private void BottomCollision(GameObject origin,  GameObject target) {
+    private double BottomCollision(GameObject origin,  GameObject target) {
         CollisionTools.ExchangeVMassVelocity(origin, target);
         target.setY((int)origin.getBounds().getMaxY() + offset);
+        return 180;
     }
-    private void LeftCollision(GameObject origin, GameObject target) {
+    private double LeftCollision(GameObject origin, GameObject target) {
         Rectangle targetbounds = target.getBounds();
         CollisionTools.ExchangeHMassVelocity(origin, target);
 
         target.setX( origin.getX()-  targetbounds.width- offset);
+        return 270;
     }
 
-    private void TopCollision( GameObject origin,GameObject target) {
+    private double TopCollision( GameObject origin,GameObject target) {
         CollisionTools.ExchangeVMassVelocity(origin, target);
 
         target.setY(origin.getY()- target.getBounds().height-offset);
+        return 0;
     }
 
-    private void RightCollision(GameObject origin, GameObject target) {
+    private double RightCollision(GameObject origin, GameObject target) {
         CollisionTools.ExchangeHMassVelocity(origin, target);
         target.setX((int)origin.getBounds().getMaxX()+offset);
+        return 90;
     }
 }

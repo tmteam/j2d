@@ -5,21 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cfdcb569-33fe-41c2-87a6-f61f60404517" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Games/com/tutorial/game/Collisions/CircleToCircleCollisionHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/tutorial/game/Collisions/CircleToCircleCollisionHandler.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Games/com/tutorial/game/CircleObject.class" afterPath="$PROJECT_DIR$/out/production/Games/com/tutorial/game/CircleObject.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Games/com/tutorial/game/Collisions/CircleToCircleCollisionHandler.class" afterPath="$PROJECT_DIR$/out/production/Games/com/tutorial/game/Collisions/CircleToCircleCollisionHandler.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Games/com/tutorial/game/Collisions/CollisionTools.class" afterPath="$PROJECT_DIR$/out/production/Games/com/tutorial/game/Collisions/CollisionTools.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Games/com/tutorial/game/Collisions/SmartRectCollisionHandler.class" afterPath="$PROJECT_DIR$/out/production/Games/com/tutorial/game/Collisions/SmartRectCollisionHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Games/com/tutorial/game/Collisions/StupidRectCollisionHandler.class" afterPath="$PROJECT_DIR$/out/production/Games/com/tutorial/game/Collisions/StupidRectCollisionHandler.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Games/com/tutorial/game/Game.class" afterPath="$PROJECT_DIR$/out/production/Games/com/tutorial/game/Game.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Games/com/tutorial/game/RectangleObject.class" afterPath="$PROJECT_DIR$/out/production/Games/com/tutorial/game/RectangleObject.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/tutorial/game/CircleObject.java" afterPath="$PROJECT_DIR$/src/com/tutorial/game/CircleObject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/tutorial/game/Collisions/CircleToCircleCollisionHandler.java" afterPath="$PROJECT_DIR$/src/com/tutorial/game/Collisions/CircleToCircleCollisionHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/tutorial/game/Collisions/CollisionTools.java" afterPath="$PROJECT_DIR$/src/com/tutorial/game/Collisions/CollisionTools.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/tutorial/game/Collisions/CircleToRectCollisionHandler.java" afterPath="$PROJECT_DIR$/src/com/tutorial/game/Collisions/CircleToRectCollisionHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/tutorial/game/Collisions/SmartRectCollisionHandler.java" afterPath="$PROJECT_DIR$/src/com/tutorial/game/Collisions/SmartRectCollisionHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/tutorial/game/Collisions/StupidRectCollisionHandler.java" afterPath="$PROJECT_DIR$/src/com/tutorial/game/Collisions/StupidRectCollisionHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/tutorial/game/Game.java" afterPath="$PROJECT_DIR$/src/com/tutorial/game/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/tutorial/game/RectangleObject.java" afterPath="$PROJECT_DIR$/src/com/tutorial/game/RectangleObject.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/tutorial/game/Kinematic.java" afterPath="$PROJECT_DIR$/src/com/tutorial/game/Kinematic.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,13 +26,18 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Games$Main.coverage" NAME="Main Coverage Results" MODIFIED="1508715379248" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.company.*</FILTER>
+    </SUITE>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="21" column="94" lean-forward="false" selection-start-line="21" selection-start-column="94" selection-end-line="21" selection-end-column="94" />
+            <state relative-caret-position="187">
+              <caret line="22" column="98" lean-forward="false" selection-start-line="22" selection-start-column="98" selection-end-line="22" selection-end-column="98" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -46,8 +48,8 @@
       <file leaf-file-name="SmartRectCollisionHandler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Collisions/SmartRectCollisionHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="91" column="9" lean-forward="false" selection-start-line="91" selection-start-column="9" selection-end-line="91" selection-end-column="9" />
+            <state relative-caret-position="425">
+              <caret line="61" column="21" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -56,33 +58,24 @@
       <file leaf-file-name="CircleObject.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/CircleObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
-              <folding>
-                <element signature="e#524#525#0" expanded="true" />
-                <element signature="e#572#573#0" expanded="true" />
-                <element signature="e#611#612#0" expanded="true" />
-                <element signature="e#674#675#0" expanded="true" />
-                <element signature="e#712#713#0" expanded="true" />
-                <element signature="e#748#749#0" expanded="true" />
-                <element signature="e#800#801#0" expanded="true" />
-                <element signature="e#840#841#0" expanded="true" />
-                <element signature="e#868#869#0" expanded="true" />
-                <element signature="e#897#898#0" expanded="true" />
-                <element signature="e#1065#1066#0" expanded="true" />
-                <element signature="e#1101#1102#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Kinematic.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Kinematic.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+            <state relative-caret-position="378">
+              <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#577#578#0" expanded="true" />
+                <element signature="e#625#626#0" expanded="true" />
+                <element signature="e#664#665#0" expanded="true" />
+                <element signature="e#727#728#0" expanded="true" />
+                <element signature="e#765#766#0" expanded="true" />
+                <element signature="e#801#802#0" expanded="true" />
+                <element signature="e#853#854#0" expanded="true" />
+                <element signature="e#893#894#0" expanded="true" />
+                <element signature="e#921#922#0" expanded="true" />
+                <element signature="e#950#951#0" expanded="true" />
+                <element signature="e#1118#1119#0" expanded="true" />
+                <element signature="e#1154#1155#0" expanded="true" />
+                <element signature="e#2101#2102#0" expanded="true" />
+                <element signature="e#2156#2157#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -91,8 +84,8 @@
       <file leaf-file-name="StupidRectCollisionHandler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Collisions/StupidRectCollisionHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="565">
-              <caret line="101" column="6" lean-forward="false" selection-start-line="101" selection-start-column="6" selection-end-line="101" selection-end-column="6" />
+            <state relative-caret-position="1309">
+              <caret line="79" column="17" lean-forward="false" selection-start-line="79" selection-start-column="17" selection-end-line="79" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -103,6 +96,18 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="73">
               <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Kinematic.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Kinematic.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="50" column="40" lean-forward="true" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -123,11 +128,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CollisionTools.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CollisionTools.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Collisions/CollisionTools.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="171" column="0" lean-forward="true" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="162" column="22" lean-forward="true" selection-start-line="162" selection-start-column="22" selection-end-line="162" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -135,15 +140,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CircleToCircleCollisionHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Collisions/CircleToCircleCollisionHandler.java">
+      <file leaf-file-name="CircleToRectCollisionHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Collisions/CircleToRectCollisionHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="45" lean-forward="true" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
+            <state relative-caret-position="119">
+              <caret line="47" column="22" lean-forward="false" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#228#229#0" expanded="true" />
-                <element signature="e#285#286#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -210,16 +213,16 @@
         <option value="$PROJECT_DIR$/src/com/tutorial/game/Collisions/CollisionToolsTest.java" />
         <option value="$PROJECT_DIR$/src/com/tutorial/game/Collisions/SmartRectCollisionHandlerDouble.java" />
         <option value="$PROJECT_DIR$/src/com/tutorial/game/Roundy.java" />
-        <option value="$PROJECT_DIR$/src/com/tutorial/game/Kinematic.java" />
         <option value="$PROJECT_DIR$/src/com/tutorial/game/GameObject.java" />
-        <option value="$PROJECT_DIR$/src/com/tutorial/game/Collisions/CircleToRectCollisionHandler.java" />
         <option value="$PROJECT_DIR$/src/com/tutorial/game/RectangleObject.java" />
+        <option value="$PROJECT_DIR$/src/com/tutorial/game/Collisions/CircleToCircleCollisionHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/tutorial/game/Collisions/CollisionTools.java" />
+        <option value="$PROJECT_DIR$/src/com/tutorial/game/CircleObject.java" />
+        <option value="$PROJECT_DIR$/src/com/tutorial/game/Kinematic.java" />
         <option value="$PROJECT_DIR$/src/com/tutorial/game/Collisions/SmartRectCollisionHandler.java" />
         <option value="$PROJECT_DIR$/src/com/tutorial/game/Collisions/StupidRectCollisionHandler.java" />
-        <option value="$PROJECT_DIR$/src/com/tutorial/game/Collisions/CircleToCircleCollisionHandler.java" />
-        <option value="$PROJECT_DIR$/src/com/tutorial/game/CircleObject.java" />
+        <option value="$PROJECT_DIR$/src/com/tutorial/game/Collisions/CircleToRectCollisionHandler.java" />
         <option value="$PROJECT_DIR$/src/com/tutorial/game/Game.java" />
-        <option value="$PROJECT_DIR$/src/com/tutorial/game/Collisions/CollisionTools.java" />
       </list>
     </option>
   </component>
@@ -536,6 +539,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27390182" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -572,14 +576,8 @@
           <properties />
           <option name="timeStamp" value="35" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/tutorial/game/Collisions/CircleToRectCollisionHandler.java</url>
-          <line>46</line>
-          <properties />
-          <option name="timeStamp" value="57" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="62" />
+      <option name="time" value="63" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -816,26 +814,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Collisions/CircleToRectCollisionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Kinematic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/GameObject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -844,22 +822,6 @@
             <element signature="e#483#484#0" expanded="true" />
             <element signature="e#509#510#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Collisions/SmartRectCollisionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="91" column="9" lean-forward="false" selection-start-line="91" selection-start-column="9" selection-end-line="91" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Collisions/StupidRectCollisionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="565">
-          <caret line="101" column="6" lean-forward="false" selection-start-line="101" selection-start-column="6" selection-end-line="101" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -874,6 +836,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/CircleObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#577#578#0" expanded="true" />
+            <element signature="e#625#626#0" expanded="true" />
+            <element signature="e#664#665#0" expanded="true" />
+            <element signature="e#727#728#0" expanded="true" />
+            <element signature="e#765#766#0" expanded="true" />
+            <element signature="e#801#802#0" expanded="true" />
+            <element signature="e#853#854#0" expanded="true" />
+            <element signature="e#893#894#0" expanded="true" />
+            <element signature="e#921#922#0" expanded="true" />
+            <element signature="e#950#951#0" expanded="true" />
+            <element signature="e#1118#1119#0" expanded="true" />
+            <element signature="e#1154#1155#0" expanded="true" />
+            <element signature="e#2101#2102#0" expanded="true" />
+            <element signature="e#2156#2157#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Collisions/CircleToCircleCollisionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="5" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="8" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Collisions/CollisionToolsTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="73">
@@ -884,43 +878,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Collisions/CircleToCircleCollisionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="45" lean-forward="true" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#228#229#0" expanded="true" />
-            <element signature="e#285#286#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/CircleObject.java">
+    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Kinematic.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
-          <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
-          <folding>
-            <element signature="e#524#525#0" expanded="true" />
-            <element signature="e#572#573#0" expanded="true" />
-            <element signature="e#611#612#0" expanded="true" />
-            <element signature="e#674#675#0" expanded="true" />
-            <element signature="e#712#713#0" expanded="true" />
-            <element signature="e#748#749#0" expanded="true" />
-            <element signature="e#800#801#0" expanded="true" />
-            <element signature="e#840#841#0" expanded="true" />
-            <element signature="e#868#869#0" expanded="true" />
-            <element signature="e#897#898#0" expanded="true" />
-            <element signature="e#1065#1066#0" expanded="true" />
-            <element signature="e#1101#1102#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="21" column="94" lean-forward="false" selection-start-line="21" selection-start-column="94" selection-end-line="21" selection-end-column="94" />
+          <caret line="50" column="40" lean-forward="true" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -929,8 +890,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Collisions/CollisionTools.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="171" column="0" lean-forward="true" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
+        <state relative-caret-position="255">
+          <caret line="162" column="22" lean-forward="true" selection-start-line="162" selection-start-column="22" selection-end-line="162" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Collisions/StupidRectCollisionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1309">
+          <caret line="79" column="17" lean-forward="false" selection-start-line="79" selection-start-column="17" selection-end-line="79" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Collisions/SmartRectCollisionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="61" column="21" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Collisions/CircleToRectCollisionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="47" column="22" lean-forward="false" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="22" column="98" lean-forward="false" selection-start-line="22" selection-start-column="98" selection-end-line="22" selection-end-column="98" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

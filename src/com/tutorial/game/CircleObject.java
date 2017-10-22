@@ -1,5 +1,7 @@
 package com.tutorial.game;
 
+import com.tutorial.game.Collisions.CollisionTools;
+
 import java.awt.*;
 
 public class CircleObject extends GameObject {
@@ -60,7 +62,8 @@ public class CircleObject extends GameObject {
         g.fillOval((int)(centerX- radius*width),(int)(centerY-radius*width),(int)(radius*width*2),(int)(radius*width*2)) ;
         g.setColor(Color.cyan);
         int ang = (int)(angle*180/Math.PI);
-        g.fillArc((int)x,(int)y,radius*2,radius*2, ang, 10);
+        int offset = 0;// radius/3;
+        g.fillArc((int)x+offset,(int)y+offset,radius*2- offset*2,radius*2- offset*2, ang, 10);
         g.fillOval((int)centerX-radius/10,(int)centerY-radius/10,radius/5,radius/5) ;
     }
     @Override
@@ -72,4 +75,7 @@ public class CircleObject extends GameObject {
         return new Rectangle((int)x,(int)y,2*radius,2*radius);
     }
 
+    public void Collide( CircleObject target){
+        CollisionTools.tryCollide(this, target);
+    }
 }

@@ -7,7 +7,7 @@ import java.awt.*;
 
 public class SmartRectCollisionHandler {
     StupidRectCollisionHandler stupid = new StupidRectCollisionHandler();
-    public  void Collide(GameObject origin, GameObject target){
+    public double Collide(GameObject origin, GameObject target){
 
         Rectangle targetBounds = target.getBounds();
         Rectangle originBounds = origin.getBounds();
@@ -31,7 +31,8 @@ public class SmartRectCollisionHandler {
                 right,top,
                 right,bottom)!= null){
             RightCollision(origin,target);
-            return;
+
+            return 90;
         }
         //Bottom
         if(CollisionTools.getIntersectionOrNull(
@@ -40,7 +41,7 @@ public class SmartRectCollisionHandler {
                 right, bottom,
                 left, bottom)!= null){
             BottomCollision(origin,target);
-            return;
+            return 180;
         }
         //left
         if(CollisionTools.getIntersectionOrNull(
@@ -49,7 +50,7 @@ public class SmartRectCollisionHandler {
                 left,bottom,
                 left, top)!=null){
             LeftCollision(origin,target);
-            return;
+            return 270;
         }
         //top
         if(CollisionTools.getIntersectionOrNull(
@@ -58,12 +59,11 @@ public class SmartRectCollisionHandler {
                 left, top,
                 right, top)!=null){
             TopCollision(origin,target);
-            return;
+            return 0;
         }
 
-        stupid.Collide(origin,target);
+        return stupid.Collide(origin,target);
     }
-    public static final int  offset = 0;
     private void BottomCollision(GameObject origin,  GameObject target) {
         CollisionTools.ExchangeVMassVelocity(origin, target);
        // target.setY((int)origin.getBounds().getMaxY() +offset);
