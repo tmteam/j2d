@@ -16,17 +16,17 @@ public class Game extends Canvas implements  Runnable {
 
         Random r = new Random();
 
-        // handler.addObject(new RectangleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 200, 60,  handler, 1));
-        // handler.addObject(new RectangleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 50, 200, handler, 2));
+         handler.addObject(new RectangleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 200, 60,  handler, 1));
+        handler.addObject(new RectangleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 50, 200, handler, 2));
         handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 50,handler,1));
-        handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 70,handler,1));
-        handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 100,handler,1));
+        //handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 70,handler,1));
+        //handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 100,handler,1));
         handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 120,handler,1));
-        handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 10,handler,0));
+        //handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 10,handler,0));
         handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 10,handler,0));
 
-        handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 20,handler,1));
-        handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 40,handler,2));
+      //  handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 20,handler,1));
+       // handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 40,handler,2));
         // handler.addObject(new RectangleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 10, 10, handler, 1));
 
 

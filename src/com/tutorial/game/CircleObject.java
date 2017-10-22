@@ -48,7 +48,10 @@ public class CircleObject extends GameObject {
        // g.setColor(Color.cyan);
        // g.drawLine((int)x +radius,(int)y, (int)x +radius,(int)y+ 3*radius );
     }
-
+    @Override
+    public double getMass(){
+        return radius*radius* Math.PI;
+    }
     @Override
     public Rectangle getBounds() {
         return new Rectangle((int)x,(int)y,2*radius,2*radius);

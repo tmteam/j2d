@@ -80,25 +80,25 @@ public class StupidRectCollisionHandler {
 
 
     private void BottomCollision(GameObject origin,  GameObject target) {
-        CollisionTools.ExchangeVVelocity(origin, target);
+        CollisionTools.ExchangeVMassVelocity(origin, target);
         target.setY((int)origin.getBounds().getMaxY() + 4);
     }
     private void LeftCollision(GameObject origin, GameObject target) {
         Rectangle targetbounds = target.getBounds();
-        CollisionTools.ExchangeHVelocity(origin, target);
+        CollisionTools.ExchangeHMassVelocity(origin, target);
         double previous = targetbounds.x;
 
         target.setX( origin.getX()-  targetbounds.width- 4);
     }
 
     private void TopCollision( GameObject origin,GameObject target) {
-        CollisionTools.ExchangeVVelocity(origin, target);
+        CollisionTools.ExchangeVMassVelocity(origin, target);
 
         target.setY(origin.getY()- target.getBounds().height-4);
     }
 
     private void RightCollision(GameObject origin, GameObject target) {
-        CollisionTools.ExchangeHVelocity(origin, target);
+        CollisionTools.ExchangeHMassVelocity(origin, target);
         target.setX((int)origin.getBounds().getMaxX()+4);
     }
 }

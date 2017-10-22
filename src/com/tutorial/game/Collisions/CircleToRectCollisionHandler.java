@@ -29,36 +29,23 @@ public class CircleToRectCollisionHandler {
         //Проверяем столкновения с углами
 
         //Левый верх
-        if(tryCollide(circle, originBounds.getX(),originBounds.getY(),origin.getVelX(),origin.getVelY()))
+        if(tryCollide(circle, originBounds.getX(),originBounds.getY(),origin))
             return;
         //Правый верх
-        if(tryCollide(circle, originBounds.getMaxX(),originBounds.getY(),origin.getVelX(),origin.getVelY()))
+        if(tryCollide(circle, originBounds.getMaxX(),originBounds.getY(),origin))
             return;
         //Правый низ
-        if(tryCollide(circle, originBounds.getMaxX(),originBounds.getMaxY(),origin.getVelX(),origin.getVelY()))
+        if(tryCollide(circle, originBounds.getMaxX(),originBounds.getMaxY(),origin))
             return;
         //Левый низ
-        if(tryCollide(circle, originBounds.getX(),originBounds.getMaxY(),origin.getVelX(),origin.getVelY()))
+        if(tryCollide(circle, originBounds.getX(),originBounds.getMaxY(),origin));
             return;
 
     }
-    boolean tryCollide(CircleObject circle, double x, double y, double originVelX,double originVelY)
+    boolean tryCollide(CircleObject circle, double x, double y, GameObject object)
     {
-        //нужно найти расстояния до каждого из углов. Если оно больше радиуса, то столкновения нет
-
-        double radius = circle.getRadius();
-        double dx =  x-circle.getCenterX();
-        double dy = y - circle.getCenterY();
-
-        double dist = dx*dx+ dy*dy;
-        if(dist<=radius){
-            //Столкновение с левым верхним углом
-            collide(circle, x, y, originVelX,originVelY);
-            return true;
-        }
-        return false;
+        return CollisionTools.tryCollide(object,x,y,0, circle);
     }
-    void  collide(CircleObject circle, double x, double y, double originVelX,double originVelY){
-        return;
-    }
+
+
 }

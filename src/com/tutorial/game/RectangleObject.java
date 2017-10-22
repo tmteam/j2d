@@ -28,7 +28,10 @@ public class RectangleObject extends GameObject {
         g.setColor(Color.orange);
         g.drawRect((int)x,(int)y,width,height);
     }
-
+    @Override
+    public double getMass(){
+        return  width*height;
+    }
     @Override
     public Rectangle getBounds() {
         return new Rectangle((int)x,(int)y,width,height);

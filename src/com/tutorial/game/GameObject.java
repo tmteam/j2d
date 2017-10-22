@@ -13,7 +13,7 @@ public abstract class GameObject {
     public abstract void tick();
     public abstract void render(Graphics g);
     public abstract Rectangle getBounds();
-
+    public  double getMass(){return 1;}
     public void  setX(double x){
         this.x = x;
     }
