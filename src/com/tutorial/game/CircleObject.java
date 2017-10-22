@@ -2,19 +2,32 @@ package com.tutorial.game;
 
 import java.awt.*;
 
-public class Roundy extends GameObject {
+public class CircleObject extends GameObject {
 
 
     private int radius;
     private Handler handler;
 
-    public Roundy(double x, double y, int radius,  Handler handler, int velocity){
+
+    public CircleObject(double x, double y, int radius,  Handler handler, int velocity){
         super(x,y);
         this.radius = radius;
         this.handler = handler;
         velX = velocity;
         velY = velocity;
 
+    }
+
+    public int getRadius(){
+        return radius;
+    }
+
+    public double getCenterX(){
+        return x+radius;
+    }
+
+    public double getCenterY(){
+        return y+radius;
     }
 
     @Override
@@ -32,8 +45,8 @@ public class Roundy extends GameObject {
         double width = 0.75;
         g.fillOval((int)(centerX- radius*width),(int)(centerY-radius*width),(int)(radius*width*2),(int)(radius*width*2)) ;
         //g.drawOval((int)x,(int)y,radius*2,radius*2);
-        g.setColor(Color.cyan);
-        g.drawLine((int)x +radius,(int)y, (int)x +radius,(int)y+ 3*radius );
+       // g.setColor(Color.cyan);
+       // g.drawLine((int)x +radius,(int)y, (int)x +radius,(int)y+ 3*radius );
     }
 
     @Override

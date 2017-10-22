@@ -1,5 +1,7 @@
 package com.tutorial.game;
 
+import com.tutorial.game.Collisions.CircleToCircleCollisionHandler;
+import com.tutorial.game.Collisions.CircleToRectCollisionHandler;
 import com.tutorial.game.Collisions.SmartRectCollisionHandler;
 import com.tutorial.game.Collisions.StupidRectCollisionHandler;
 
@@ -13,6 +15,9 @@ public class Kinematic {
         this.objects = objects;
     }
     private SmartRectCollisionHandler rectsCollider = new SmartRectCollisionHandler();
+    private CircleToRectCollisionHandler circleToRectCollisionHandler = new CircleToRectCollisionHandler();
+    private CircleToCircleCollisionHandler circleToCircleCollisionHandler = new CircleToCircleCollisionHandler();
+
     public void tick(){
 
         for(int i = 0; i<objects.size();i++) {
@@ -42,7 +47,17 @@ public class Kinematic {
                 if (target == null)
                     continue;
                 if (target.getBounds().intersects(originBounds)) {
-                    rectsCollider.Collide(origin, target);
+                    if(origin instanceof CircleObject){
+                        if(target instanceof  CircleObject)
+                            circleToCircleCollisionHandler.Collide((CircleObject) origin, (CircleObject)target);
+                        else
+                            circleToRectCollisionHandler.Collide((CircleObject)origin, target);
+                    }
+                    else if(target instanceof  CircleObject){
+                        circleToRectCollisionHandler.Collide((CircleObject)target, origin);
+                    }
+                    else
+                        rectsCollider.Collide(origin, target);
                 }
             }
         }
