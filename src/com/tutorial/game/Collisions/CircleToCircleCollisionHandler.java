@@ -5,6 +5,6 @@ import com.tutorial.game.GameObject;
 
 public class CircleToCircleCollisionHandler {
     public void  Collide(CircleObject origin, CircleObject target){
-        CollisionTools.tryCollide(origin, origin.getCenterX(), origin.getCenterY(), origin.getRadius(), target);
+        CollisionTools.tryCollide(origin, target);
     }
 }

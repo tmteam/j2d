@@ -25,8 +25,8 @@ public class RectangleObject extends GameObject {
 
     @Override
     public void render(Graphics g) {
-        g.setColor(Color.orange);
-        g.drawRect((int)x,(int)y,width,height);
+        g.setColor(new Color(0xFF4500));
+        g.fillRect((int)x,(int)y,width,height) ;
     }
     @Override
     public double getMass(){

@@ -16,30 +16,14 @@ public class Game extends Canvas implements  Runnable {
 
         Random r = new Random();
 
-         handler.addObject(new RectangleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 200, 60,  handler, 1));
-        handler.addObject(new RectangleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 50, 200, handler, 2));
-        handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 50,handler,1));
-        //handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 70,handler,1));
-        //handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 100,handler,1));
-        handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 120,handler,1));
-        //handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 10,handler,0));
-        handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 10,handler,0));
+        //handler.addObject(new RectangleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 40, 60,  handler, 0));
+       // handler.addObject(new RectangleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 50, 200, handler, 2));
+        handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 60, handler, 1));
+        handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 40, handler, 0));
 
-      //  handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 20,handler,1));
-       // handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 40,handler,2));
-        // handler.addObject(new RectangleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 10, 10, handler, 1));
-
-
-        for (int i = 0; i < 10; i++)
-        {
-       //  handler.addObject(new RectangleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 5, 5, handler, 0));
-       //  handler.addObject(new RectangleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 5, 5, handler, 1));
-       //  handler.addObject(new RectangleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 10, 10, handler, 2));
-       //  handler.addObject(new RectangleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 10, 20, handler, 3));
-         }
-        for (int i = 1; i < 10; i++) {
-          //  handler.addObject(new Roundy(100, 100, i*5, handler, 2));
-        }
+        // for (int i = 1; i < 15; i++) {
+        //      handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 10+i*3, handler, 0));
+       // }
     }
     public synchronized  void start(){
         thread = new Thread(this);

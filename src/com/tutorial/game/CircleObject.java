@@ -4,7 +4,8 @@ import java.awt.*;
 
 public class CircleObject extends GameObject {
 
-
+    private double angle;
+    private double angleVelocity;
     private int radius;
     private Handler handler;
 
@@ -15,9 +16,22 @@ public class CircleObject extends GameObject {
         this.handler = handler;
         velX = velocity;
         velY = velocity;
-
+        angle =0;
+        angleVelocity = 0.00;
+    }
+    public  double getInertionMoment(){
+        return getMass()*radius*radius/2;
     }
 
+    public double getAngularMoment(){
+        return getMass()*radius*radius* angleVelocity/2;
+    }
+    public double getAngleVelocity(){
+        return angleVelocity;
+    }
+    public void  setAngleVelocity(double velocity){
+        angleVelocity = velocity;
+    }
     public int getRadius(){
         return radius;
     }
@@ -32,7 +46,7 @@ public class CircleObject extends GameObject {
 
     @Override
     public void tick() {
-        //handler.addObject(new Trail( x,y, ID.Trail ,Color.red, 16,16,0.01f, handler));
+        angle+=angleVelocity;
     }
 
     @Override
@@ -44,9 +58,10 @@ public class CircleObject extends GameObject {
         double centerY = y+radius;
         double width = 0.75;
         g.fillOval((int)(centerX- radius*width),(int)(centerY-radius*width),(int)(radius*width*2),(int)(radius*width*2)) ;
-        //g.drawOval((int)x,(int)y,radius*2,radius*2);
-       // g.setColor(Color.cyan);
-       // g.drawLine((int)x +radius,(int)y, (int)x +radius,(int)y+ 3*radius );
+        g.setColor(Color.cyan);
+        int ang = (int)(angle*180/Math.PI);
+        g.fillArc((int)x,(int)y,radius*2,radius*2, ang, 10);
+        g.fillOval((int)centerX-radius/10,(int)centerY-radius/10,radius/5,radius/5) ;
     }
     @Override
     public double getMass(){

@@ -56,7 +56,6 @@ public class CollisionTools {
         double b2 = +(end2x  - start2x);
         double d2 = -(a2*start2x + b2*start2y);
 
-
         //подставляем концы отрезков, для выяснения в каких полуплоскотях они
         double seg1_line2_start = a2*start1x + b2*start1y + d2;
         double seg1_line2_end = a2*end1x + b2*end1y + d2;
@@ -77,48 +76,6 @@ public class CollisionTools {
 
     public static Point getIntersectionOrNull(Point start1,  Point end1,Point start2, Point end2){
         return getIntersectionOrNull(start1.x, start1.y, end1.x, end1.y, start2.x, start2.y, end2.x,end2.y);
-
-        //http://rain.ifmo.ru/cat/view.php/theory/math/geometry-2005
-        //https://users.livejournal.com/-winnie/152327.html
-/*
-        double dir1X = end1.x- start1.x;
-        double dir1Y = end1.y-start1.y;
-        //считаем уравнения прямых проходящих через отрезки
-        double a1 = -dir1Y;
-        double b1 = +dir1X;
-        double d1 = -(a1*start1.x + b1*start1.y);
-
-
-
-        double a2 = -(end2.y - start2.y);
-        double b2 = +(end2.x  - start2.y);
-        double d2 = -(a2*start2.x + b2*start2.y);
-
-
-        //подставляем концы отрезков, для выяснения в каких полуплоскотях они
-        double seg1_line2_start = a2*start1.x + b2*start1.y + d2;
-        double seg1_line2_end = a2*end1.x + b2*end1.y + d2;
-
-        double seg2_line1_start = a1*start2.x + b1*start2.y + d1;
-        double seg2_line1_end = a1*end2.x + b1*end2.y + d1;
-
-        //если концы одного отрезка имеют один знак, значит он в одной полуплоскости и пересечения нет.
-        double digit1 = seg1_line2_start * seg1_line2_end;
-        double digit2 = seg2_line1_start * seg2_line1_end;
-
-        if(digit1==0 || digit2==0)
-        {
-
-            return new Point();
-            //Есть пограничное пересечение, либо отрезки вытянуты в линию
-
-        }
-
-        if (digit1 > 0 || digit2 > 0)
-            return null;
-
-        double u = seg1_line2_start / (seg1_line2_start - seg1_line2_end);
-        return new Point((int)(start1.x + u*dir1X), (int) (start1.y+ u*dir1Y));*/
     }
 
     public static boolean  tryCollide(GameObject origin, double originX, double originY, int originRadius, CircleObject target){
@@ -143,7 +100,7 @@ public class CollisionTools {
         double xvel2Prime = target.getVelX()* cos + target.getVelY()*sin;
 
         //проекции скорости x и y на линию перпендикулярную лин действия
-        double yvel1Prime = origin.getVelY()* cos -origin.getVelX()*sin;
+        double yvel1Prime = origin.getVelY()* cos - origin.getVelX()*sin;
         double yvel2Prime = target.getVelY()* cos - target.getVelX()*sin;
 
         double mass1 = origin.getMass();
@@ -168,6 +125,48 @@ public class CollisionTools {
         //будем изменять только target:
         target.setX (target.getX() + (-delta+1)*cos);
         target.setY (target.getY() + (-delta+1)*sin);
+        return true;
+    }
+
+
+
+    public static boolean  tryCollide(CircleObject origin,CircleObject target){
+
+        double ocx = origin.getCenterX();
+        double ocy = origin.getCenterY();
+
+        if(!tryCollide(origin, ocx, ocy, origin.getRadius(), target))
+            return false;
+
+        double dx = target.getCenterX() - ocx;
+        double dy = target.getCenterY() - ocy;
+        double distance = Math.sqrt(dx*dx+ dy*dy);
+
+        double cos = dx/distance;
+        double sin = dy/distance;
+
+        //Начинаем рассчёт угловых скоростей.
+
+        //проекции скорости x и y на линию перпендикулярную лин действия
+        double Vo = origin.getVelY()* cos - origin.getVelX()*sin;
+        double Vt = target.getVelY()* cos - target.getVelX()*sin;
+
+        double Rt = target.getRadius();
+        double Ro = origin.getRadius();
+        double Io = origin.getInertionMoment();
+        double It = target.getInertionMoment();
+
+        //Исходный полный момент импульса двух тел
+        double I = Io*origin.getAngleVelocity()+ It*target.getAngleVelocity();
+
+        double Wt = (Vo*Io - Vt*Io + Ro*I)/(Rt*Io + Ro*It);
+        //Корректируем
+        double ineractionK = 0.5;
+        Wt = ineractionK*Wt+  target.getAngleVelocity()*(1-ineractionK);
+        //Выставляем во второй
+        double Wo = (I-It*Wt)/Io;
+        origin.setAngleVelocity(Wo);
+        target.setAngleVelocity(Wt);
         return true;
     }
 

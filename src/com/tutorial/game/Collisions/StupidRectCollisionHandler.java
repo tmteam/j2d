@@ -6,6 +6,7 @@ import java.awt.*;
 
 public class StupidRectCollisionHandler {
 
+    public static final int  offset = 0;
 
 
     public  void Collide(GameObject origin, GameObject target){
@@ -81,24 +82,23 @@ public class StupidRectCollisionHandler {
 
     private void BottomCollision(GameObject origin,  GameObject target) {
         CollisionTools.ExchangeVMassVelocity(origin, target);
-        target.setY((int)origin.getBounds().getMaxY() + 4);
+        target.setY((int)origin.getBounds().getMaxY() + offset);
     }
     private void LeftCollision(GameObject origin, GameObject target) {
         Rectangle targetbounds = target.getBounds();
         CollisionTools.ExchangeHMassVelocity(origin, target);
-        double previous = targetbounds.x;
 
-        target.setX( origin.getX()-  targetbounds.width- 4);
+        target.setX( origin.getX()-  targetbounds.width- offset);
     }
 
     private void TopCollision( GameObject origin,GameObject target) {
         CollisionTools.ExchangeVMassVelocity(origin, target);
 
-        target.setY(origin.getY()- target.getBounds().height-4);
+        target.setY(origin.getY()- target.getBounds().height-offset);
     }
 
     private void RightCollision(GameObject origin, GameObject target) {
         CollisionTools.ExchangeHMassVelocity(origin, target);
-        target.setX((int)origin.getBounds().getMaxX()+4);
+        target.setX((int)origin.getBounds().getMaxX()+offset);
     }
 }
