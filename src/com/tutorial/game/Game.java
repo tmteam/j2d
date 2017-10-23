@@ -9,15 +9,23 @@ public class Game extends Canvas implements  Runnable {
     private Thread thread;
     private boolean running = false;
     private Handler handler;
+    KeyInput input;
+    private CameraCanvas cameraCanvas;
     public Game() {
+        cameraCanvas = new CameraCanvas();
+        input = new KeyInput(cameraCanvas);
         handler = new Handler();
-        //this.addKeyListener(new KeyInput(handler));
+        this.addKeyListener(input);
         new Window(WIDTH, HEIGHT, "HIHIHI", this);
-
         Random r = new Random();
+        handler.addObject(new RectangleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 40, 60,  handler, 1));
+        handler.addObject(new RectangleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 50, 200, handler, 1));
+        handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 40, handler, 2));
+        handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 100, handler, 0));
+        handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 100, handler, 0));
+        handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 40, handler, 0));
+        handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 80, handler, 1));
 
-        handler.addObject(new RectangleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 40, 60,  handler, 0));
-        handler.addObject(new RectangleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 50, 200, handler, 0));
         for(int i = 0; i< 5; i++) {
             handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 80, handler, 1));
             handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 40, handler, 0));
@@ -82,8 +90,8 @@ public class Game extends Canvas implements  Runnable {
 
         g.setColor(Color.black);
         g.fillRect(0,0,WIDTH, HEIGHT);
-
-        handler.render(g);
+        cameraCanvas.setCurrentGraphics(g);
+        handler.render(cameraCanvas);
 
         g.dispose();
         bs.show();

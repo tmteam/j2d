@@ -52,19 +52,24 @@ public class CircleObject extends GameObject {
     }
 
     @Override
-    public void render(Graphics g) {
+    public void render(CameraCanvas g) {
         g.setColor(Color.cyan);
-        g.fillOval((int)x,(int)y,radius*2,radius*2) ;
+        g.fillOval(0,(int)0,radius*2,radius*2) ;
         g.setColor(Color.black);
-        double centerX =  x+radius;
-        double centerY = y+radius;
         double width = 0.75;
-        g.fillOval((int)(centerX- radius*width),(int)(centerY-radius*width),(int)(radius*width*2),(int)(radius*width*2)) ;
-        g.setColor(Color.cyan);
+        g.fillOval((int)(radius*(1-width)),(int)(radius*(1-width)),(int)(radius*width*2),(int)(radius*width*2)) ;
+
+        g.setColor(Color.orange);
         int ang = (int)(angle*180/Math.PI);
-        int offset = 0;// radius/3;
-        g.fillArc((int)x+offset,(int)y+offset,radius*2- offset*2,radius*2- offset*2, ang, 10);
-        g.fillOval((int)centerX-radius/10,(int)centerY-radius/10,radius/5,radius/5) ;
+        int offset =  radius/4;
+        g.fillArc(-offset,-offset,radius*2+ offset*2,radius*2+ offset*2, ang, 10);
+
+        g.fillArc(-offset,-offset,radius*2+ offset*2,radius*2+ offset*2, ang+90, 10);
+        g.fillArc(-offset,-offset,radius*2+ offset*2,radius*2+ offset*2, ang+180, 10);
+        g.fillArc(-offset,-offset,radius*2+ offset*2,radius*2+ offset*2, ang+270, 10);
+
+
+        g.fillOval(radius-radius/10,(int)radius-radius/10,radius/5,radius/5) ;
     }
     @Override
     public double getMass(){

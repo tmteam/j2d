@@ -63,21 +63,23 @@ public class Kinematic {
 
     private void CorrectAreaBounds(GameObject origin, Rectangle originBounds) {
        // origin.velY+=0.01;
+        int width = Game.WIDTH*2;
+        int height = Game.HEIGHT*2;
         if (origin.y <= 0 && origin.velY<0) {
             origin.velY = -origin.velY;
             origin.y = 0;
-        } else if (origin.y > Game.HEIGHT - originBounds.height -60 && origin.velY>0) {
+        } else if (origin.y > height - originBounds.height -60 && origin.velY>0) {
             origin.velY = -origin.velY;
-            origin.y = Game.HEIGHT - originBounds.height -60;
+            origin.y = height - originBounds.height -60;
         }
         if (origin.x <= 0) {
             origin.velX = -origin.velX;
             origin.x = 0;
         }
 
-        else if (origin.x > Game.WIDTH - originBounds.width) {
+        else if (origin.x > width - originBounds.width) {
             origin.velX = -origin.velX;
-            origin.x = Game.WIDTH - originBounds.width;
+            origin.x = width - originBounds.width;
         }
     }
 

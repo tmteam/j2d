@@ -148,6 +148,32 @@ public class CollisionTools {
         //Начинаем рассчёт угловых скоростей.
 
         //проекции скорости x и y на линию перпендикулярную лин действия
+        SaveAngleMomentumTurnCalc(origin, target, cos, sin);
+        return true;
+    }
+    private static void SaveKineticMomentumCalc(CircleObject origin, CircleObject target, double cos, double sin){
+        double Vo = origin.getVelY()* cos - origin.getVelX()*sin;
+        double Vt = target.getVelY()* cos - target.getVelX()*sin;
+
+        double Rt = target.getRadius();
+        double Ro = origin.getRadius();
+        double Io = origin.getInertionMoment();
+        double It = target.getInertionMoment();
+        double At = target.getAngleVelocity();
+        double Ao = origin.getAngleVelocity();
+
+        double E = Io*Ao*Ao+ It*At*At;
+
+        double znam = (It*Ro*Ro + Io*Rt*Rt);
+        double podKornem = Math.abs(E*znam  - Io*It*(Vo*Vo - 2*Vo*Vt + Vt*Vt));
+        double chislit = Ro*Math.sqrt(podKornem) - (Io*Rt*Vo- Io*Rt*Vt);
+        double Wt = chislit/znam;
+        double Wo = (Wt*Rt-Vt+Vo)/Ro;
+
+        origin.setAngleVelocity(Wo);
+        target.setAngleVelocity(Wt);
+    }
+    private static void SaveAngleMomentumTurnCalc(CircleObject origin, CircleObject target, double cos, double sin) {
         double Vo = origin.getVelY()* cos - origin.getVelX()*sin;
         double Vt = target.getVelY()* cos - target.getVelX()*sin;
 
@@ -156,18 +182,23 @@ public class CollisionTools {
         double Io = origin.getInertionMoment();
         double It = target.getInertionMoment();
 
+        double At = target.getAngleVelocity();
+        double Ao = origin.getAngleVelocity();
+
+
         //Исходный полный момент импульса двух тел
         double I = Io*origin.getAngleVelocity()+ It*target.getAngleVelocity();
 
-        double Wt = (Vo*Io - Vt*Io + Ro*I)/(Rt*Io + Ro*It);
+        double Wt = ( Vt*Io-Vo*Io  + Ro*I)/(Rt*Io + Ro*It);
         //Корректируем
-        double ineractionK = 0.5;
-        Wt = ineractionK*Wt+  target.getAngleVelocity()*(1-ineractionK);
+        double ineractionK = 1;
         //Выставляем во второй
         double Wo = (I-It*Wt)/Io;
+
+        Wt = ineractionK*Wt+  target.getAngleVelocity()*(1-ineractionK);
+
         origin.setAngleVelocity(Wo);
-        target.setAngleVelocity(Wt);
-        return true;
+        target.setAngleVelocity(-Wt);
     }
 
 }

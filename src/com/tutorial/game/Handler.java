@@ -20,11 +20,13 @@ public class Handler  {
         }
         kinematic.tick();
     }
-    public void render(Graphics g){
+    public void render(CameraCanvas c){
         for (int i = 0; i< objects.size(); i++) {
             GameObject obj = objects.get(i);
-            if(obj!=null)
-                obj.render(g);
+            if(obj!=null) {
+                c.setPaintingFor(obj);
+                obj.render(c);
+            }
         }
     }
     int objectCount = 0;

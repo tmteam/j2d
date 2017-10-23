@@ -11,7 +11,7 @@ public abstract class GameObject {
         this.y = y;
     }
     public abstract void tick();
-    public abstract void render(Graphics g);
+    public abstract void render(CameraCanvas g);
     public abstract Rectangle getBounds();
     public  double getMass(){return 1;}
     public void  setX(double x){
