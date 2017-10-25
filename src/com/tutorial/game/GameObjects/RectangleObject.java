@@ -1,18 +1,20 @@
-package com.tutorial.game;
+package com.tutorial.game.GameObjects;
+
+import com.tutorial.game.GameObject;
+import com.tutorial.game.Handler;
+import com.tutorial.game.ShiftableCanvas;
 
 import java.awt.*;
 
 public class RectangleObject extends GameObject {
 
-    private int height;
-    private int width;
-    private Handler handler;
+    protected int height;
+    protected int width;
 
-    public RectangleObject(double x, double y, int height, int width,  Handler handler, int velocity){
+    public RectangleObject(double x, double y, int height, int width,  int velocity){
         super(x,y);
         this.height = height;
         this.width = width;
-        this.handler = handler;
         velX = velocity;
         velY = velocity;
     }
@@ -24,7 +26,7 @@ public class RectangleObject extends GameObject {
     }
 
     @Override
-    public void render(CameraCanvas g) {
+    public void render(ShiftableCanvas g) {
         g.setColor(new Color(0xFF4500));
         g.fillRect(0,0,width,height) ;
     }

@@ -1,6 +1,9 @@
-package com.tutorial.game;
+package com.tutorial.game.GameObjects;
 
 import com.tutorial.game.Collisions.CollisionTools;
+import com.tutorial.game.GameObject;
+import com.tutorial.game.Handler;
+import com.tutorial.game.ShiftableCanvas;
 
 import java.awt.*;
 
@@ -9,13 +12,11 @@ public class CircleObject extends GameObject {
     private double angle;
     private double angleVelocity;
     private int radius;
-    private Handler handler;
 
 
-    public CircleObject(double x, double y, int radius,  Handler handler, int velocity){
+    public CircleObject(double x, double y, int radius,  int velocity){
         super(x,y);
         this.radius = radius;
-        this.handler = handler;
         velX = velocity;
         velY = velocity;
         angle =0;
@@ -52,7 +53,7 @@ public class CircleObject extends GameObject {
     }
 
     @Override
-    public void render(CameraCanvas g) {
+    public void render(ShiftableCanvas g) {
         g.setColor(Color.cyan);
         g.fillOval(0,(int)0,radius*2,radius*2) ;
         g.setColor(Color.black);
@@ -67,7 +68,6 @@ public class CircleObject extends GameObject {
         g.fillArc(-offset,-offset,radius*2+ offset*2,radius*2+ offset*2, ang+90, 10);
         g.fillArc(-offset,-offset,radius*2+ offset*2,radius*2+ offset*2, ang+180, 10);
         g.fillArc(-offset,-offset,radius*2+ offset*2,radius*2+ offset*2, ang+270, 10);
-
 
         g.fillOval(radius-radius/10,(int)radius-radius/10,radius/5,radius/5) ;
     }

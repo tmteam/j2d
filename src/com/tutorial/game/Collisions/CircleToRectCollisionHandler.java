@@ -1,19 +1,20 @@
 package com.tutorial.game.Collisions;
 
-import com.tutorial.game.CircleObject;
+import com.tutorial.game.GameObjects.CircleObject;
 import com.tutorial.game.GameObject;
-import javafx.scene.shape.Circle;
 
 import java.awt.*;
 
 public class CircleToRectCollisionHandler {
     SmartRectCollisionHandler rectCollisionHandler = new SmartRectCollisionHandler();
+    StupidRectCollisionHandler stupidRectCollisionHandler = new StupidRectCollisionHandler();
 
     public  void Collide(CircleObject circle, GameObject origin){
         double centerX = circle.getCenterX();
         double centerY = circle.getCenterY();
         double collideResultAngle = 0;
         Rectangle originBounds = origin.getBounds();
+
         if(centerX>= originBounds.getX() && centerX<= originBounds.getMaxX()) {
             collideResultAngle= rectCollisionHandler.Collide(circle, origin);
         }
@@ -22,7 +23,7 @@ public class CircleToRectCollisionHandler {
         }
         //Если почему то круг оказался внутри прямоугольника - воспользуемся стандартным выходом из этой ситуации
         else if(originBounds.contains(centerX,centerY)){
-            collideResultAngle =  rectCollisionHandler.Collide(circle, origin);
+            collideResultAngle =  stupidRectCollisionHandler.Collide(circle, origin);
         }
         //Проверяем столкновения с углами
 

@@ -2,15 +2,20 @@ package com.tutorial.game;
 
 import com.tutorial.game.Collisions.CircleToRectCollisionHandler;
 import com.tutorial.game.Collisions.SmartRectCollisionHandler;
+import com.tutorial.game.GameObjects.CircleObject;
 
 import java.awt.*;
 import java.util.LinkedList;
 
 public class Kinematic {
     private LinkedList<GameObject> objects;
+    private int worldWidth;
+    private int worldHeight;
 
-    public Kinematic(LinkedList<GameObject> objects){
+    public Kinematic(LinkedList<GameObject> objects, int worldWith, int worldHeight){
         this.objects = objects;
+        this.worldWidth = worldWith;
+        this.worldHeight = worldHeight;
     }
     private SmartRectCollisionHandler rectsCollider = new SmartRectCollisionHandler();
     private CircleToRectCollisionHandler circleToRectCollisionHandler = new CircleToRectCollisionHandler();
@@ -62,24 +67,21 @@ public class Kinematic {
 
 
     private void CorrectAreaBounds(GameObject origin, Rectangle originBounds) {
-       // origin.velY+=0.01;
-        int width = Game.WIDTH*2;
-        int height = Game.HEIGHT*2;
         if (origin.y <= 0 && origin.velY<0) {
             origin.velY = -origin.velY;
             origin.y = 0;
-        } else if (origin.y > height - originBounds.height -60 && origin.velY>0) {
+        } else if (origin.y > worldHeight - originBounds.height && origin.velY>0) {
             origin.velY = -origin.velY;
-            origin.y = height - originBounds.height -60;
+            origin.y = worldHeight - originBounds.height;
         }
         if (origin.x <= 0) {
             origin.velX = -origin.velX;
             origin.x = 0;
         }
 
-        else if (origin.x > width - originBounds.width) {
+        else if (origin.x > worldWidth - originBounds.width) {
             origin.velX = -origin.velX;
-            origin.x = width - originBounds.width;
+            origin.x = worldWidth - originBounds.width;
         }
     }
 

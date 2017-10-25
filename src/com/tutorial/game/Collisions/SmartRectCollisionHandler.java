@@ -11,13 +11,14 @@ public class SmartRectCollisionHandler {
 
         Rectangle targetBounds = target.getBounds();
         Rectangle originBounds = origin.getBounds();
+        double dvx=origin.getVelX() - target.getVelX();
+        double dvy=origin.getVelY() - target.getVelY();
+        double targetRelativeCurrentX = target.getX()- origin.getX(); //- dvx/2;
+        double targetRelativeCurrentY = target.getY()- origin.getY(); //- dvy/2;
 
-        double targetRelativeCurrentX = target.getX()- origin.getX();
-        double targetRelativeCurrentY = target.getY()- origin.getY();
+        double targetRelativePreviousX = targetRelativeCurrentX + 10*dvx;
 
-        double targetRelativePreviousX = targetRelativeCurrentX + 10*(origin.getVelX() - target.getVelX());
-
-        double targetRelativePreviousY = targetRelativeCurrentY + 10*(origin.getVelY() - target.getVelY());
+        double targetRelativePreviousY = targetRelativeCurrentY + 10*dvy;
 
         double right = originBounds.width;
         double top = - targetBounds.height;
@@ -30,8 +31,10 @@ public class SmartRectCollisionHandler {
                 targetRelativeCurrentX, targetRelativeCurrentY,
                 right,top,
                 right,bottom)!= null){
-            RightCollision(origin,target);
-
+            if(target.getVelX()<= origin.getVelX())
+                RightCollision(origin,target);
+            else
+                LeftCollision(origin,target);
             return 90;
         }
         //Bottom
@@ -40,7 +43,11 @@ public class SmartRectCollisionHandler {
                 targetRelativeCurrentX, targetRelativeCurrentY,
                 right, bottom,
                 left, bottom)!= null){
-            BottomCollision(origin,target);
+
+            if(target.getVelY()<= origin.getVelY())
+                BottomCollision(origin,target);
+             else
+                TopCollision(origin,target);
             return 180;
         }
         //left
@@ -49,7 +56,14 @@ public class SmartRectCollisionHandler {
                 targetRelativeCurrentX, targetRelativeCurrentY,
                 left,bottom,
                 left, top)!=null){
-            LeftCollision(origin,target);
+
+
+            if(target.getVelX()>= origin.getVelX())
+                LeftCollision(origin,target);
+            else
+                RightCollision(origin,target);
+
+
             return 270;
         }
         //top
@@ -58,38 +72,44 @@ public class SmartRectCollisionHandler {
                 targetRelativeCurrentX, targetRelativeCurrentY,
                 left, top,
                 right, top)!=null){
-            TopCollision(origin,target);
+            if(target.getVelY()>= origin.getVelY())
+
+                TopCollision(origin,target);
+            else
+
+                BottomCollision(origin,target);
             return 0;
         }
 
-        return stupid.Collide(origin,target);
+        return 0;// stupid.Collide(origin,target);
     }
+    int offset = 0;
     private void BottomCollision(GameObject origin,  GameObject target) {
         CollisionTools.ExchangeVMassVelocity(origin, target);
-       // target.setY((int)origin.getBounds().getMaxY() +offset);
-       // System.out.println("Bottom Collision");
-
+        target.setY((int)origin.getBounds().getMaxY() +offset);
+        if(origin.getVelY()>target.getVelY()){
+            System.out.println("Smart Bottom failed");
+        }
     }
     private void LeftCollision(GameObject origin, GameObject target) {
         Rectangle targetbounds = target.getBounds();
         CollisionTools.ExchangeHMassVelocity(origin, target);
 
-        //target.setX( origin.getX()-  targetbounds.width- offset);
+        target.setX( origin.getX()-  targetbounds.width- offset);
        // System.out.println("Left Collision");
 
     }
 
     private void TopCollision( GameObject origin,GameObject target) {
         CollisionTools.ExchangeVMassVelocity(origin, target);
-
-        //target.setY(origin.getY()- target.getBounds().height-offset);
+        target.setY(origin.getY()- target.getBounds().height-offset);
        // System.out.println("Top Collision");
 
     }
 
     private void RightCollision(GameObject origin, GameObject target) {
         CollisionTools.ExchangeHMassVelocity(origin, target);
-       // target.setX((int)origin.getBounds().getMaxX()+offset);
+        target.setX((int)origin.getBounds().getMaxX()+offset);
        // System.out.println("Right Collision");
 
     }

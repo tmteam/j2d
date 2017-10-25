@@ -6,7 +6,7 @@ import java.awt.*;
 
 public class StupidRectCollisionHandler {
 
-    public static final int  offset = 0;
+    public static final int  offset = 1;
 
 
     public  double Collide(GameObject origin, GameObject target){
@@ -84,6 +84,10 @@ public class StupidRectCollisionHandler {
     private double BottomCollision(GameObject origin,  GameObject target) {
         CollisionTools.ExchangeVMassVelocity(origin, target);
         target.setY((int)origin.getBounds().getMaxY() + offset);
+        if(origin.getVelY()>target.getVelY()){
+            target.setVelY(-target.getVelY());
+            System.out.println("StupidBotomFailed");
+        }
         return 180;
     }
     private double LeftCollision(GameObject origin, GameObject target) {

@@ -1,5 +1,10 @@
 package com.tutorial.game;
 
+import com.tutorial.game.Cameras.ManualCamera;
+import com.tutorial.game.GameObjects.CircleObject;
+import com.tutorial.game.GameObjects.RectangleObject;
+import com.tutorial.game.GameObjects.Wall;
+
 import java.awt.*;
 import java.awt.image.BufferStrategy;
 import java.util.Random;
@@ -10,31 +15,17 @@ public class Game extends Canvas implements  Runnable {
     private boolean running = false;
     private Handler handler;
     KeyInput input;
-    private CameraCanvas cameraCanvas;
     public Game() {
-        cameraCanvas = new CameraCanvas();
-        input = new KeyInput(cameraCanvas);
-        handler = new Handler();
+        ManualCamera camera = new ManualCamera();
+
+        input = new KeyInput(camera);
+        handler = new Handler(camera,2000, 2000);
+        handler.setScreenSize(WIDTH, HEIGHT);
         this.addKeyListener(input);
+
         new Window(WIDTH, HEIGHT, "HIHIHI", this);
-        Random r = new Random();
-        handler.addObject(new RectangleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 40, 60,  handler, 1));
-        handler.addObject(new RectangleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 50, 200, handler, 1));
-        handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 40, handler, 2));
-        handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 100, handler, 0));
-        handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 100, handler, 0));
-        handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 40, handler, 0));
-        handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 80, handler, 1));
 
-        for(int i = 0; i< 5; i++) {
-            handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 80, handler, 1));
-            handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 40, handler, 0));
-        }
-        handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 10, handler, 0));
-
-        // for (int i = 1; i < 15; i++) {
-        //      handler.addObject(new CircleObject(r.nextInt(WIDTH), r.nextInt(HEIGHT), 10+i*3, handler, 0));
-       // }
+        handler.generateObjects();
     }
     public synchronized  void start(){
         thread = new Thread(this);
@@ -87,12 +78,7 @@ public class Game extends Canvas implements  Runnable {
             return;
         }
         Graphics g = bs.getDrawGraphics();
-
-        g.setColor(Color.black);
-        g.fillRect(0,0,WIDTH, HEIGHT);
-        cameraCanvas.setCurrentGraphics(g);
-        handler.render(cameraCanvas);
-
+        handler.render(g);
         g.dispose();
         bs.show();
     }

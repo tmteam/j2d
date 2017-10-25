@@ -1,6 +1,6 @@
 package com.tutorial.game.Collisions;
 
-import com.tutorial.game.CircleObject;
+import com.tutorial.game.GameObjects.CircleObject;
 import com.tutorial.game.GameObject;
 
 import java.awt.*;
@@ -123,8 +123,8 @@ public class CollisionTools {
 
         //Растаскиваем круги, чтобы они больше не пересекались
         //будем изменять только target:
-        target.setX (target.getX() + (-delta+1)*cos);
-        target.setY (target.getY() + (-delta+1)*sin);
+        target.setX (target.getX() + (-delta)*cos);
+        target.setY (target.getY() + (-delta)*sin);
         return true;
     }
 
