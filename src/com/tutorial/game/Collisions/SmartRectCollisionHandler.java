@@ -68,7 +68,7 @@ public class SmartRectCollisionHandler {
             }
             default: {
                // System.out.println("Collide failed");
-                return stupid.Collide(origin,target);
+                return 0;// stupid.Collide(origin,target);
             }
         }
     }

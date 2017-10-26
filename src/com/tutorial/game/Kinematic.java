@@ -3,6 +3,7 @@ package com.tutorial.game;
 import com.tutorial.game.Collisions.CircleToRectCollisionHandler;
 import com.tutorial.game.Collisions.SmartRectCollisionHandler;
 import com.tutorial.game.GameObjects.CircleObject;
+import com.tutorial.game.GameObjects.Wall;
 
 import java.awt.*;
 import java.util.LinkedList;
@@ -19,8 +20,9 @@ public class Kinematic {
     }
     private SmartRectCollisionHandler rectsCollider = new SmartRectCollisionHandler();
     private CircleToRectCollisionHandler circleToRectCollisionHandler = new CircleToRectCollisionHandler();
-
+    //int tick = 0;
     public void tick(){
+      //  tick++;
 
         for(int i = 0; i<objects.size();i++) {
 
@@ -31,8 +33,8 @@ public class Kinematic {
 
             origin.x += origin.velX;
             origin.y += origin.velY;
-
-            CorrectAreaBounds(origin, origin.getBounds());
+           // if(tick>=10)
+                CorrectAreaBounds(origin, origin.getBounds());
         }
 
 
@@ -67,21 +69,24 @@ public class Kinematic {
 
 
     private void CorrectAreaBounds(GameObject origin, Rectangle originBounds) {
-        if (origin.y <= 0 && origin.velY<0) {
+        if(origin instanceof Wall)
+            return;
+        int offset = -20;
+        if (origin.y <= -offset && origin.velY<0) {
             origin.velY = -origin.velY;
-            origin.y = 0;
-        } else if (origin.y > worldHeight - originBounds.height && origin.velY>0) {
+            origin.y = -offset;
+        } else if (origin.y > worldHeight + offset - originBounds.height && origin.velY>0) {
             origin.velY = -origin.velY;
-            origin.y = worldHeight - originBounds.height;
+            origin.y = worldHeight+offset - originBounds.height;
         }
-        if (origin.x <= 0) {
+        if (origin.x <= -offset) {
             origin.velX = -origin.velX;
-            origin.x = 0;
+            origin.x = -offset;
         }
 
-        else if (origin.x > worldWidth - originBounds.width) {
+        else if (origin.x > worldWidth +offset - originBounds.width) {
             origin.velX = -origin.velX;
-            origin.x = worldWidth - originBounds.width;
+            origin.x = worldWidth +offset - originBounds.width;
         }
     }
 

@@ -18,35 +18,41 @@ public class Handler  {
         kinematic= new Kinematic(this .objects,worldHeight, worldWidth);
         display = new Display(new ShiftableCanvas(camera), worldHeight, worldWidth);
 
-        int wallWidth = 20;
 
-        addObject(new Wall(0,0,worldHeight,wallWidth));
-        addObject(new Wall(worldWidth-wallWidth,0,worldHeight-1,wallWidth));
-
-        addObject(new Wall(wallWidth,0,wallWidth,worldHeight-2*wallWidth));
-        addObject(new Wall(wallWidth,worldWidth-wallWidth,wallWidth,worldHeight-2*wallWidth));
-
-        addObject(new Wall(500,500,500,wallWidth));
     }
     Random r = new Random();
     public void  generateObjects(){
 
-        for(int times = 0; times<3; times++) {
+        for(int times = 0; times<5; times++) {
             addObject(new RectangleObject(getRndX(), getRndY(), 40, 60, 1));
             addObject(new RectangleObject(getRndX(), getRndY(), 50, 200, 1));
             addObject(new CircleObject(getRndX(), getRndY(), 40, 2));
             addObject(new CircleObject(getRndX(), getRndY(), 100, 0));
             addObject(new CircleObject(getRndX(), getRndY(), 100, 5));
-            addObject(new CircleObject(getRndX(), getRndY(), 40, 0));
-            addObject(new CircleObject(getRndX(), getRndY(), 80, 1));
+          //  addObject(new CircleObject(getRndX(), getRndY(), 40, 0));
+           // addObject(new CircleObject(getRndX(), getRndY(), 80, 1));
 
             for (int i = 0; i < 5; i++) {
-                addObject(new CircleObject(getRndX(), getRndY(), 80,  1));
-                addObject(new CircleObject(getRndX(), getRndY(), 40, 6));
-            }
-            addObject(new CircleObject(getRndX(), getRndY(), 10, 0));
-        }
+             //   addObject(new CircleObject(getRndX(), getRndY(), 80,  1));
+               // addObject(new CircleObject(getRndX(), getRndY(), 40, 6));
+               // addObject(new CircleObject(getRndX(), getRndY(), 10, 0));
+               // addObject(new CircleObject(getRndX(), getRndY(), 5, 0));
 
+            }
+
+        }
+        int wallWidth = 50;
+        int offset = -100;
+        //left vertical
+        addObject(new Wall(0,offset,worldHeight-2*offset,wallWidth));
+        //right vertical
+        addObject(new Wall(worldWidth-wallWidth,offset,worldHeight-1-2*offset,wallWidth));
+        //top horizontal
+        addObject(new Wall(wallWidth+offset,0,wallWidth,worldHeight-2*wallWidth-2*offset));
+        //bottom horizontal
+        addObject(new Wall(wallWidth+offset,worldWidth-wallWidth,wallWidth,worldHeight-2*wallWidth-2*offset));
+
+        addObject(new Wall(500,500,500,wallWidth));
 
     }
     double getRndX(){

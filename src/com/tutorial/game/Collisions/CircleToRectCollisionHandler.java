@@ -23,7 +23,7 @@ public class CircleToRectCollisionHandler {
         }
         //Если почему то круг оказался внутри прямоугольника - воспользуемся стандартным выходом из этой ситуации
         else if(originBounds.contains(centerX,centerY)){
-            collideResultAngle =  stupidRectCollisionHandler.Collide(circle, origin);
+            collideResultAngle =  rectCollisionHandler.Collide(circle, origin);
         }
         //Проверяем столкновения с углами
 
