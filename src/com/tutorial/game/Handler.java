@@ -24,11 +24,11 @@ public class Handler  {
     public void  generateObjects(){
 
         for(int times = 0; times<5; times++) {
-            addObject(new RectangleObject(getRndX(), getRndY(), 40, 60, 1));
-            addObject(new RectangleObject(getRndX(), getRndY(), 50, 200, 1));
-            addObject(new CircleObject(getRndX(), getRndY(), 40, 2));
+            addObject(new RectangleObject(getRndX(), getRndY(), 40, 60, 0));
+           // addObject(new RectangleObject(getRndX(), getRndY(), 50, 200, 1));
+            addObject(new CircleObject(getRndX(), getRndY(), 50, 0));
             addObject(new CircleObject(getRndX(), getRndY(), 100, 0));
-            addObject(new CircleObject(getRndX(), getRndY(), 100, 5));
+          //  addObject(new CircleObject(getRndX(), getRndY(), 100, 5));
           //  addObject(new CircleObject(getRndX(), getRndY(), 40, 0));
            // addObject(new CircleObject(getRndX(), getRndY(), 80, 1));
 

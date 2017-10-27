@@ -35,6 +35,12 @@ public class ShiftableCanvas {
         objectX = (object.getX() + xOffset)*scale;
         objectY = (object.getY()+ yOffset)*scale;
     }
+    public void setStroke(Stroke stroke){
+        ((Graphics2D)currentGraphics).setStroke ( stroke );
+    }
+    public void  drawLine(float x1, float y1, float x2, float y2){
+        currentGraphics.drawLine((int)(x1*scale+ objectX),(int)(y1*scale+ objectY),(int)(x2*scale+ objectX),(int)(y2*scale+ objectY));
+    }
     public void fillRect(float x, float y, int width, int height){
         currentGraphics.fillRect((int)(x*scale+ objectX), (int)(y*scale+ objectY), (int)(width*scale), (int)(height*scale));
     }
@@ -44,9 +50,7 @@ public class ShiftableCanvas {
     public void fillOval(float x, float y, int width, int height){
         currentGraphics.fillOval ((int)(x*scale+ objectX), (int)(y*scale+ objectY), (int)(width*scale), (int)(height*scale));
     }
-    public void  drawLine(float x, float y, float x2, float y2){
-        currentGraphics.drawLine((int)(x*scale+ objectX), (int)(y*scale+ objectY), (int)(x2*scale+ objectX), (int)(y2*scale+ objectY));
-    }
+
     public void drawOval(float x, float y, int width, int height){
         currentGraphics.drawOval ((int)(x*scale+ objectX), (int)(y*scale+ objectY), (int)(width*scale), (int)(height*scale));
     }

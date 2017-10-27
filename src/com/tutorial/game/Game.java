@@ -1,31 +1,39 @@
 package com.tutorial.game;
 
 import com.tutorial.game.Cameras.ManualCamera;
-import com.tutorial.game.GameObjects.CircleObject;
-import com.tutorial.game.GameObjects.RectangleObject;
-import com.tutorial.game.GameObjects.Wall;
+import com.tutorial.game.GameObjects.PivaGamer;
+import com.tutorial.game.Keyboard.CamerMoverConcreteKeyHandler;
+import com.tutorial.game.Keyboard.KeyHandler;
+import com.tutorial.game.Keyboard.PlayerMoverConcreteKeyHandler;
 
 import java.awt.*;
 import java.awt.image.BufferStrategy;
-import java.util.Random;
 
 public class Game extends Canvas implements  Runnable {
     public static  final  int WIDTH = 800, HEIGHT = WIDTH/12*9;
     private Thread thread;
     private boolean running = false;
     private Handler handler;
-    KeyInput input;
+
     public Game() {
         ManualCamera camera = new ManualCamera();
 
-        input = new KeyInput(camera);
+
         handler = new Handler(camera,2000, 2000);
         handler.setScreenSize(WIDTH, HEIGHT);
-        this.addKeyListener(input);
+
 
         new Window(WIDTH, HEIGHT, "HIHIHI", this);
 
         handler.generateObjects();
+        PivaGamer player = new PivaGamer(400,400,120);
+        handler.addObject(player);
+
+        KeyHandler keyHandler = new KeyHandler();
+        keyHandler.subscribe(new CamerMoverConcreteKeyHandler(camera));
+        keyHandler.subscribe(new PlayerMoverConcreteKeyHandler(player));
+
+        this.addKeyListener(keyHandler);
     }
     public synchronized  void start(){
         thread = new Thread(this);

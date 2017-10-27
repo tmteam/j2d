@@ -9,9 +9,9 @@ import java.awt.*;
 
 public class CircleObject extends GameObject {
 
-    private double angle;
-    private double angleVelocity;
-    private int radius;
+    protected double angle;
+    protected double angleVelocity;
+    protected int radius;
 
 
     public CircleObject(double x, double y, int radius,  int velocity){
@@ -54,7 +54,7 @@ public class CircleObject extends GameObject {
 
     @Override
     public void render(ShiftableCanvas g) {
-        g.setColor(Color.cyan);
+        g.setColor(Color.green);
         g.fillOval(0,(int)0,radius*2,radius*2) ;
         g.setColor(Color.black);
         double width = 0.75;
