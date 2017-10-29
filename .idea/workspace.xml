@@ -2,26 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cfdcb569-33fe-41c2-87a6-f61f60404517" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/tutorial/game/CollideLineResult.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/tutorial/game/Collisions/ColideSide.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/tutorial/game/Collisions/CollideCalculationResult.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Piva/CurrentInput.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Piva/HumanBrain.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Piva/IPivaBrain.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Piva/RandomBrain.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Donut.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Piva/SensorInfo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/tutorial/game/Collisions/CircleToRectCollisionHandler.java" afterPath="$PROJECT_DIR$/src/com/tutorial/game/Collisions/CircleToRectCollisionHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/tutorial/game/Collisions/CollisionTools.java" afterPath="$PROJECT_DIR$/src/com/tutorial/game/Collisions/CollisionTools.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/tutorial/game/Collisions/SmartRectCollisionHandler.java" afterPath="$PROJECT_DIR$/src/com/tutorial/game/Collisions/SmartRectCollisionHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/tutorial/game/Game.java" afterPath="$PROJECT_DIR$/src/com/tutorial/game/Game.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/tutorial/game/GameObject.java" afterPath="$PROJECT_DIR$/src/com/tutorial/game/GameObject.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/tutorial/game/GameObjects/CircleObject.java" afterPath="$PROJECT_DIR$/src/com/tutorial/game/GameObjects/CircleObject.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Piva/CurrentInput.java" afterPath="$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Piva/CurrentInput.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/tutorial/game/GameObjects/PivaGamer.java" afterPath="$PROJECT_DIR$/src/com/tutorial/game/GameObjects/PivaGamer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/tutorial/game/GameObjects/RectangleObject.java" afterPath="$PROJECT_DIR$/src/com/tutorial/game/GameObjects/RectangleObject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Wall.java" afterPath="$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Wall.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/tutorial/game/Handler.java" afterPath="$PROJECT_DIR$/src/com/tutorial/game/Handler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/tutorial/game/Keyboard/PlayerMoverConcreteKeyHandler.java" afterPath="$PROJECT_DIR$/src/com/tutorial/game/Keyboard/PlayerMoverConcreteKeyHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/tutorial/game/Kinematic.java" afterPath="$PROJECT_DIR$/src/com/tutorial/game/Kinematic.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/tutorial/game/ShiftableCanvas.java" afterPath="$PROJECT_DIR$/src/com/tutorial/game/ShiftableCanvas.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,53 +30,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Game.java">
+      <file leaf-file-name="GameObject.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/GameObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="23" column="24" lean-forward="false" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+            <state relative-caret-position="136">
+              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PivaGamer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/GameObjects/PivaGamer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="107" column="0" lean-forward="true" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1170#1171#0" expanded="true" />
-                <element signature="e#1204#1205#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FakeCamera.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Cameras/FakeCamera.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-              <folding>
-                <element signature="e#195#196#0" expanded="true" />
-                <element signature="e#219#220#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Kinematic.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Kinematic.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="691">
-              <caret line="70" column="43" lean-forward="false" selection-start-line="70" selection-start-column="43" selection-end-line="70" selection-end-column="43" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#CorrectAreaBounds#0;class#Kinematic#0" expanded="false" />
+                <element signature="e#542#543#0" expanded="true" />
+                <element signature="e#568#569#0" expanded="true" />
+                <element signature="e#1356#1357#0" expanded="true" />
+                <element signature="e#1384#1385#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -93,32 +49,70 @@
       <file leaf-file-name="RectangleObject.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/GameObjects/RectangleObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="31" column="40" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="31" selection-end-column="40" />
+            <state relative-caret-position="136">
+              <caret line="35" column="23" lean-forward="false" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Wall.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Wall.java">
+      <file leaf-file-name="Kinematic.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Kinematic.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="21" column="28" lean-forward="false" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="28" />
+            <state relative-caret-position="198">
+              <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#207#208#0" expanded="true" />
-                <element signature="e#252#253#0" expanded="true" />
+                <element signature="method#CorrectAreaBounds#0;class#Kinematic#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Handler.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Donut.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Donut.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+              <folding>
+                <element signature="e#183#184#0" expanded="true" />
+                <element signature="e#228#229#0" expanded="true" />
+                <element signature="e#300#330#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PivaGamer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/GameObjects/PivaGamer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="310">
+              <caret line="139" column="5" lean-forward="true" selection-start-line="139" selection-start-column="5" selection-end-line="139" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#tick#0;class#PivaGamer#0" expanded="false" />
+                <element signature="method#renderVisionRay#0;class#PivaGamer#0" expanded="false" />
+                <element signature="method#render#0;class#PivaGamer#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KeyHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Keyboard/KeyHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Handler.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Handler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="77">
-              <caret line="17" column="39" lean-forward="true" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+            <state relative-caret-position="485">
+              <caret line="38" column="9" lean-forward="true" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#tick#0;class#Handler#0" expanded="false" />
@@ -128,26 +122,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CircleObject.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CircleObject.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/GameObjects/CircleObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="19" column="19" lean-forward="true" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+            <state relative-caret-position="221">
+              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameObject.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/GameObject.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="19" column="32" lean-forward="true" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#568#569#0" expanded="true" />
+                <element signature="method#render#0;class#CircleObject#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -156,9 +138,24 @@
       <file leaf-file-name="CollisionTools.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Collisions/CollisionTools.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-              <folding />
+            <state relative-caret-position="171">
+              <caret line="225" column="47" lean-forward="false" selection-start-line="225" selection-start-column="27" selection-end-line="225" selection-end-column="47" />
+              <folding>
+                <element signature="method#areCircleAndSegmentIntersected#0;class#CollisionTools#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Wall.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Wall.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="248">
+              <caret line="21" column="32" lean-forward="true" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#567#568#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -195,8 +192,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/tutorial/game/ID.java" />
-        <option value="C:/Program Files (x86)/Java/jdk1.8.0_144/jre/lib/rt.jar!/sun/misc/Unsafe.class" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
         <option value="$PROJECT_DIR$/src/com/tutorial/game/BasicEnemy.java" />
         <option value="$PROJECT_DIR$/src/com/tutorial/game/Tools.java" />
@@ -221,13 +216,11 @@
         <option value="$PROJECT_DIR$/src/com/tutorial/game/Cameras/ManualCamera.java" />
         <option value="$PROJECT_DIR$/src/com/tutorial/game/Display.java" />
         <option value="$PROJECT_DIR$/src/com/tutorial/game/Collisions/StupidRectCollisionHandler.java" />
-        <option value="$PROJECT_DIR$/src/com/tutorial/game/Collisions/CircleToRectCollisionHandler.java" />
         <option value="$PROJECT_DIR$/src/com/tutorial/game/Keyboard/IKeyHandler.java" />
         <option value="$PROJECT_DIR$/src/com/tutorial/game/Keyboard/IKeyConcreteHandler.java" />
         <option value="$PROJECT_DIR$/src/com/tutorial/game/Keyboard/KeyInput.java" />
         <option value="$PROJECT_DIR$/src/com/tutorial/game/Keyboard/CamerMoverConcreteKeyHandler.java" />
         <option value="$PROJECT_DIR$/src/com/tutorial/game/Keyboard/KeyHandler.java" />
-        <option value="$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Piva/CurrentInput.java" />
         <option value="$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Piva/IPivaBrain.java" />
         <option value="$PROJECT_DIR$/src/com/tutorial/game/Keyboard/PlayerMoverConcreteKeyHandler.java" />
         <option value="$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Piva/RandomBrain.java" />
@@ -236,15 +229,19 @@
         <option value="$PROJECT_DIR$/src/com/tutorial/game/Collisions/ColideSide.java" />
         <option value="$PROJECT_DIR$/src/com/tutorial/game/Collisions/SmartRectCollisionHandler.java" />
         <option value="$PROJECT_DIR$/src/com/tutorial/game/Collisions/CollideCalculationResult.java" />
-        <option value="$PROJECT_DIR$/src/com/tutorial/game/GameObjects/RectangleObject.java" />
         <option value="$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Wall.java" />
         <option value="$PROJECT_DIR$/src/com/tutorial/game/CollideLineResult.java" />
-        <option value="$PROJECT_DIR$/src/com/tutorial/game/Collisions/CollisionTools.java" />
-        <option value="$PROJECT_DIR$/src/com/tutorial/game/Kinematic.java" />
-        <option value="$PROJECT_DIR$/src/com/tutorial/game/GameObjects/CircleObject.java" />
-        <option value="$PROJECT_DIR$/src/com/tutorial/game/GameObject.java" />
-        <option value="$PROJECT_DIR$/src/com/tutorial/game/GameObjects/PivaGamer.java" />
         <option value="$PROJECT_DIR$/src/com/tutorial/game/Game.java" />
+        <option value="$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Piva/CurrentInput.java" />
+        <option value="$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Piva/SensorInfo.java" />
+        <option value="$PROJECT_DIR$/src/com/tutorial/game/GameObject.java" />
+        <option value="$PROJECT_DIR$/src/com/tutorial/game/Collisions/CircleToRectCollisionHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/tutorial/game/Collisions/CollisionTools.java" />
+        <option value="$PROJECT_DIR$/src/com/tutorial/game/GameObjects/RectangleObject.java" />
+        <option value="$PROJECT_DIR$/src/com/tutorial/game/GameObjects/CircleObject.java" />
+        <option value="$PROJECT_DIR$/src/com/tutorial/game/Kinematic.java" />
+        <option value="$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Donut.java" />
+        <option value="$PROJECT_DIR$/src/com/tutorial/game/GameObjects/PivaGamer.java" />
         <option value="$PROJECT_DIR$/src/com/tutorial/game/Handler.java" />
       </list>
     </option>
@@ -331,15 +328,6 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="game" type="462c0819:PsiDirectoryNode" />
               <item name="GameObjects" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Games" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Games" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
-              <item name="GameObjects" type="462c0819:PsiDirectoryNode" />
-              <item name="Piva" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Games" type="b2602c69:ProjectViewProjectNode" />
@@ -594,7 +582,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27390182" sideWeight="0.50277776" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27390182" sideWeight="0.49722221" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27390182" sideWeight="0.49722221" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -639,15 +627,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/ID.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Window.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" column="21" lean-forward="false" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Keyboard/CamerMoverConcreteKeyHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -752,21 +731,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Collisions/CircleToRectCollisionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="19" column="9" lean-forward="false" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Keyboard/IKeyConcreteHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_144/src.zip!/java/awt/event/KeyAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -789,14 +753,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1496">
           <caret line="113" column="42" lean-forward="false" selection-start-line="113" selection-start-column="36" selection-end-line="113" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Piva/CurrentInput.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -877,25 +833,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Keyboard/KeyHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
-          <folding>
-            <element signature="e#431#432#0" expanded="true" />
-            <element signature="e#471#472#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Piva/IPivaBrain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="27" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Piva/RandomBrain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -904,63 +841,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Collisions/CollisionTools.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Wall.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="21" column="28" lean-forward="false" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#207#208#0" expanded="true" />
-            <element signature="e#252#253#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Kinematic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="691">
-          <caret line="70" column="43" lean-forward="false" selection-start-line="70" selection-start-column="43" selection-end-line="70" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#CorrectAreaBounds#0;class#Kinematic#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/GameObjects/RectangleObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="31" column="40" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="31" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/GameObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="19" column="32" lean-forward="true" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#568#569#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Cameras/FakeCamera.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
           <folding>
-            <element signature="e#195#196#0" expanded="true" />
-            <element signature="e#219#220#0" expanded="true" />
+            <element signature="e#195#196#0" expanded="false" />
+            <element signature="e#219#220#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -975,36 +862,152 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Handler.java">
+    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Piva/IPivaBrain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="17" column="39" lean-forward="true" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+        <state relative-caret-position="51">
+          <caret line="3" column="21" lean-forward="false" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Piva/CurrentInput.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Keyboard/IKeyConcreteHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Collisions/CircleToRectCollisionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Piva/SensorInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/GameObjects/RectangleObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="35" column="23" lean-forward="false" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/GameObjects/CircleObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#tick#0;class#Handler#0" expanded="false" />
-            <element signature="method#removeObject#0;class#Handler#0" expanded="false" />
+            <element signature="method#render#0;class#CircleObject#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Wall.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="21" column="32" lean-forward="true" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#567#568#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Kinematic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#CorrectAreaBounds#0;class#Kinematic#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/GameObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#542#543#0" expanded="true" />
+            <element signature="e#568#569#0" expanded="true" />
+            <element signature="e#1356#1357#0" expanded="true" />
+            <element signature="e#1384#1385#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Donut.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+          <folding>
+            <element signature="e#183#184#0" expanded="true" />
+            <element signature="e#228#229#0" expanded="true" />
+            <element signature="e#300#330#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/GameObjects/PivaGamer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="107" column="0" lean-forward="true" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+        <state relative-caret-position="310">
+          <caret line="139" column="5" lean-forward="true" selection-start-line="139" selection-start-column="5" selection-end-line="139" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1170#1171#0" expanded="true" />
-            <element signature="e#1204#1205#0" expanded="true" />
+            <element signature="method#tick#0;class#PivaGamer#0" expanded="false" />
+            <element signature="method#renderVisionRay#0;class#PivaGamer#0" expanded="false" />
+            <element signature="method#render#0;class#PivaGamer#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/GameObjects/CircleObject.java">
+    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Keyboard/KeyHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="19" column="19" lean-forward="true" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+        <state relative-caret-position="119">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Collisions/CollisionTools.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="225" column="47" lean-forward="false" selection-start-line="225" selection-start-column="27" selection-end-line="225" selection-end-column="47" />
+          <folding>
+            <element signature="method#areCircleAndSegmentIntersected#0;class#CollisionTools#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Handler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="38" column="9" lean-forward="true" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#tick#0;class#Handler#0" expanded="false" />
+            <element signature="method#removeObject#0;class#Handler#0" expanded="false" />
           </folding>
         </state>
       </provider>

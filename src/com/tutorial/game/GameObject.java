@@ -37,6 +37,13 @@ public abstract class GameObject {
         return collideCalc.collidePoint;
     }
 
+    public boolean tryCollideWith(GameObject o){
+        return false;
+    }
+    public void afterCollisionWith(GameObject o){
+
+    }
+
     public Color getMapColor(){ return Color.white; }
 
     public void  setVelX(double velX){

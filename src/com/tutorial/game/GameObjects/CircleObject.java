@@ -83,14 +83,26 @@ public class CircleObject extends GameObject {
     }
 
     public void Collide( CircleObject target){
-        CollisionTools.tryCollide(this, target);
+
+    }
+
+    @Override
+    public boolean tryCollideWith(GameObject o){
+        if(o instanceof RectangleObject){
+            CollisionTools.CollideCircleAndRectangle(this, o);
+            return true;
+        }
+        if(o instanceof  CircleObject){
+            CollisionTools.tryCollideTwoCircles(this, (CircleObject)o);
+            return true;
+        }
+        return false;
     }
 
     @Override
     public Point getFirstIntersectionWith(float x1, float y1, float x2, float y2) {
-        if(!CollisionTools.areIntersected((float)this.getCenterX(), (float)this.getCenterY(), radius, x1,y1,x2,y2))
+        if(!CollisionTools.areCircleAndSegmentIntersected((float)this.getCenterX(), (float)this.getCenterY(), radius, x1,y1,x2,y2))
                 return null;
-
        return super.getFirstIntersectionWith(x1,y1,x2,y2);
     }
 }

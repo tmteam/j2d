@@ -1,10 +1,10 @@
 package com.tutorial.game.GameObjects;
 
-import com.tutorial.game.Collisions.ColideSide;
-import com.tutorial.game.Collisions.CollideCalculationResult;
+import com.tutorial.game.Collisions.*;
 import com.tutorial.game.GameObject;
 import com.tutorial.game.Handler;
 import com.tutorial.game.ShiftableCanvas;
+import com.tutorial.game.Tools;
 
 import java.awt.*;
 
@@ -12,7 +12,8 @@ public class RectangleObject extends GameObject {
 
     protected int height;
     protected int width;
-
+    protected SmartRectCollisionHandler rectCollider = new SmartRectCollisionHandler();
+    private CircleToRectCollisionHandler circleToRectCollisionHandler = new CircleToRectCollisionHandler();
     public RectangleObject(double x, double y, int height, int width,  int velocity){
         super(x,y);
         this.height = height;
@@ -28,8 +29,20 @@ public class RectangleObject extends GameObject {
         collideCalc.checkSide(ColideSide.right,x+width,y,x+width,y+height);
         collideCalc.checkSide(ColideSide.top,x,y,x+width,y);
         collideCalc.checkSide(ColideSide.bottom,x,y+height,x+width,y+height);
-
         return collideCalc.collidePoint;
+    }
+
+    @Override
+    public boolean tryCollideWith(GameObject o){
+        if(o instanceof RectangleObject){
+            CollisionTools.CollideRects(this,o);
+            return true;
+        }
+        if(o instanceof  CircleObject){
+            CollisionTools.CollideCircleAndRectangle((CircleObject)o, this);
+            return true;
+        }
+        return false;
     }
 
     @Override

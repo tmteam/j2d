@@ -1,10 +1,8 @@
 package com.tutorial.game.GameObjects;
 
-import com.tutorial.game.CollideLineResult;
+import com.tutorial.game.*;
 import com.tutorial.game.GameObjects.Piva.IPivaBrain;
-import com.tutorial.game.Handler;
-import com.tutorial.game.Kinematic;
-import com.tutorial.game.ShiftableCanvas;
+
 import java.awt.*;
 
 public class PivaGamer extends CircleObject {
@@ -139,6 +137,13 @@ public class PivaGamer extends CircleObject {
 
         g.fillArc(0,0,diameter,diameter,ang-20, 40);
 
+    }
+    @Override
+    public void afterCollisionWith(GameObject o){
+        if(o instanceof Donut){
+            handler.removeObject(o);
+            energyLevel+=50000;
+        }
     }
     private int getCurrentRadius(){
         return minimumRadius+  (int)(Math.sqrt(energyLevel)/3);

@@ -1,11 +1,8 @@
 package com.tutorial.game;
 
 import com.tutorial.game.Cameras.ICamera;
-import com.tutorial.game.GameObjects.CircleObject;
+import com.tutorial.game.GameObjects.*;
 import com.tutorial.game.GameObjects.Piva.RandomBrain;
-import com.tutorial.game.GameObjects.PivaGamer;
-import com.tutorial.game.GameObjects.RectangleObject;
-import com.tutorial.game.GameObjects.Wall;
 
 import java.awt.*;
 import java.util.LinkedList;
@@ -25,18 +22,18 @@ public class Handler  {
         addObject(new PivaGamer(200,200,new RandomBrain(), this));
 
         for(int times = 0; times<20; times++) {
-            addObject(new RectangleObject(getRndX(), getRndY(), 40, 60, 0));
+         //   addObject(new RectangleObject(getRndX(), getRndY(), 40, 60, 0));
            // addObject(new RectangleObject(getRndX(), getRndY(), 50, 200, 1));
-            addObject(new CircleObject(getRndX(), getRndY(), 50, 0));
-            addObject(new CircleObject(getRndX(), getRndY(), 100, 0));
+            addObject(new Donut(getRndX(), getRndY(), 50, 0));
+            addObject(new Donut(getRndX(), getRndY(), 100, 0));
           //  addObject(new CircleObject(getRndX(), getRndY(), 100, 5));
-            addObject(new CircleObject(getRndX(), getRndY(), 40, 0));
+            addObject(new Donut(getRndX(), getRndY(), 40, 0));
            // addObject(new CircleObject(getRndX(), getRndY(), 80, 1));
 
             for (int i = 0; i < 5; i++) {
              //   addObject(new CircleObject(getRndX(), getRndY(), 80,  1));
                // addObject(new CircleObject(getRndX(), getRndY(), 40, 6));
-                addObject(new CircleObject(getRndX(), getRndY(), 10, 0));
+                addObject(new Donut(getRndX(), getRndY(), 10, 0));
                // addObject(new CircleObject(getRndX(), getRndY(), 5, 0));
             }
         }

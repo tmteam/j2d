@@ -18,8 +18,7 @@ public class Kinematic {
         this.worldWidth = worldWith;
         this.worldHeight = worldHeight;
     }
-    private SmartRectCollisionHandler rectsCollider = new SmartRectCollisionHandler();
-    private CircleToRectCollisionHandler circleToRectCollisionHandler = new CircleToRectCollisionHandler();
+
 
     //int tick = 0;
     public void tick(){
@@ -52,17 +51,13 @@ public class Kinematic {
                 if (target == null)
                     continue;
                 if (target.getBounds().intersects(originBounds)) {
-                    if(origin instanceof CircleObject){
-                        if(target instanceof  CircleObject)
-                            ((CircleObject) origin).Collide((CircleObject)target);
-                        else
-                            circleToRectCollisionHandler.Collide((CircleObject)origin, target);
+                    boolean collided = origin.tryCollideWith(target);
+                    if(!collided)
+                        collided = target.tryCollideWith(origin);
+                    if(collided){
+                        origin.afterCollisionWith(target);
+                        target.afterCollisionWith(origin);
                     }
-                    else if(target instanceof  CircleObject){
-                        circleToRectCollisionHandler.Collide((CircleObject)target, origin);
-                    }
-                    else
-                        rectsCollider.Collide(origin, target);
                 }
             }
         }
