@@ -1,5 +1,7 @@
 package com.tutorial.game.GameObjects;
 
+import com.tutorial.game.Collisions.ColideSide;
+import com.tutorial.game.Collisions.CollideCalculationResult;
 import com.tutorial.game.GameObject;
 import com.tutorial.game.Handler;
 import com.tutorial.game.ShiftableCanvas;
@@ -20,8 +22,18 @@ public class RectangleObject extends GameObject {
     }
 
     @Override
-    public void tick() {
+    public Point getFirstIntersectionWith(float x1, float y1, float x2, float y2) {
+        CollideCalculationResult collideCalc = new CollideCalculationResult(x1,y1,x2,y2);
+        collideCalc.checkSide(ColideSide.left,x,y,x,y+height);
+        collideCalc.checkSide(ColideSide.right,x+width,y,x+width,y+height);
+        collideCalc.checkSide(ColideSide.top,x,y,x+width,y);
+        collideCalc.checkSide(ColideSide.bottom,x,y+height,x+width,y+height);
 
+        return collideCalc.collidePoint;
+    }
+
+    @Override
+    public void tick() {
         //handler.addObject(new Trail( x,y, ID.Trail ,Color.red, 16,16,0.01f, handler));
     }
 

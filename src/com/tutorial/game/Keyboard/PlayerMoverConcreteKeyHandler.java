@@ -1,13 +1,14 @@
 package com.tutorial.game.Keyboard;
 
+import com.tutorial.game.GameObjects.Piva.HumanBrain;
 import com.tutorial.game.GameObjects.PivaGamer;
 
 import java.awt.event.KeyEvent;
 
 public class PlayerMoverConcreteKeyHandler implements  IKeyConcreteHandler {
-    private PivaGamer player;
+    private HumanBrain player;
 
-    public PlayerMoverConcreteKeyHandler(PivaGamer player){
+    public PlayerMoverConcreteKeyHandler(HumanBrain player){
 
         this.player = player;
     }

@@ -1,100 +1,111 @@
 package com.tutorial.game.GameObjects;
 
-import com.tutorial.game.GameObject;
+import com.tutorial.game.CollideLineResult;
+import com.tutorial.game.GameObjects.Piva.IPivaBrain;
+import com.tutorial.game.Handler;
+import com.tutorial.game.Kinematic;
 import com.tutorial.game.ShiftableCanvas;
-import com.tutorial.game.Tools;
-
-import javax.tools.Tool;
 import java.awt.*;
 
 public class PivaGamer extends CircleObject {
-    public PivaGamer(double x, double y, int radius){
-        super(x, y, radius,0);
 
+    private IPivaBrain brain;
+    private Handler handler;
+    private double breakLevel;
+    private double throttleLevel;
+    private double turnLevel;
 
-    }
-    double turnLevel = 0;
-    double throttleLevel = 1;
-    double breakLevel = 1;
-    boolean leftPushed= false;
-    boolean rightPushed= false;
+    private double energyLevel =100000;
 
-    boolean throttlePushed= false;
-    boolean breakPushed = false;
-    public void startMoveLeftCommand(){
-        leftPushed=true;
-    }
+    private final double throttleCoast = 100;
+    private final double breakCoast = 10;
+    private final double turnCoast = 100;
+    private final double tickCoast = 1;
 
-    public void startMoveRightCommand(){
-        rightPushed = true;
-    }
+    private final float visionLenght = 700;
 
-    public void startMoveUpCommand(){
-        throttlePushed = true;
-    }
-    public void startMoveDownCommand(){
-        breakPushed = true;
-    }
+    private static final int minimumRadius = 20;
+    private CollideLineResult visionRayResult1 = null;
+    private CollideLineResult visionRayResult2 = null;
+    private CollideLineResult visionRayResult3 = null;
 
-    public void finishMoveLeftCommand(){
-        leftPushed = false;
-    }
-
-    public void finishMoveRightCommand(){
-        rightPushed = false;
-    }
-
-    public void finishMoveUpCommand(){
-        throttlePushed = false;
-    }
-    public void finishMoveDownCommand(){
-        breakPushed = false;
+    public PivaGamer(double x, double y, IPivaBrain brain, Handler handler){
+        super(x, y, minimumRadius,0);
+        this.brain = brain;
+        this.handler = handler;
     }
 
     @Override
+    public Color getMapColor(){
+        return Color.green;
+    }
+    @Override
     public void tick(){
-        if(throttlePushed){
-            throttleLevel = Tools.clamp(throttleLevel+0.03,0,1);
-        }
-        else
-            throttleLevel = 0;
-        if(breakPushed){
-            breakLevel = Tools.clamp(breakLevel+0.05,0,1);
-        }
-        else
-            breakLevel = 0;
+       /* if(energyLevel<=0)
+            energyLevel=100000;
+*/      if(energyLevel>0) {
 
-        double turnStep = 0.0001;
-        if(leftPushed){
-            turnLevel+=turnStep;
-        }
-        if(rightPushed){
-            turnLevel-= turnStep;
-        }
-        if(!leftPushed && !rightPushed){
-            turnLevel = 0;
-        }
-        turnLevel= Tools.clamp(turnLevel,-0.1,0.1);
-        angleVelocity+=turnLevel;
-        angleVelocity*=0.99;
-        double sina = Math.sin(angle);
-        double cosa = Math.cos(angle);
+            double sina = Math.sin(angle);
+            double cosa = Math.cos(angle);
 
-        velX+=0.1*throttleLevel*cosa;
-        velY-=0.1*throttleLevel*sina;
-        velX *=(1 - 0.5*breakLevel);
-        velY *=(1 - 0.5*breakLevel);
+            visionRayResult1 = handler.collideLine(this, (float)getCenterX(),(float)getCenterY(),(float)(angle-0.2), visionLenght);
+            visionRayResult2 = handler.collideLine(this, (float)getCenterX(),(float)getCenterY(),(float)(angle), visionLenght);
+            visionRayResult3 = handler.collideLine(this, (float)getCenterX(),(float)getCenterY(),(float)(angle+0.2), visionLenght);
+
+            brain.tick(null);
+            turnLevel = brain.getTurnLevel();
+            breakLevel = brain.getBreakLevel();
+            throttleLevel = brain.getThrottleLevel();
+
+            double radiusCoast = radius/60d;
+
+            energyLevel -= Math.abs(turnLevel) * turnCoast *radiusCoast;
+            energyLevel -= breakLevel * breakCoast *radiusCoast;
+            energyLevel -= throttleCoast * throttleLevel *radiusCoast;
+            energyLevel -= tickCoast*radiusCoast;
+
+            angleVelocity += brain.getTurnLevel();
+            angleVelocity *= 0.99;
+
+
+            velX += 0.1 * throttleLevel * cosa;
+            velY -= 0.1 * throttleLevel * sina;
+            velX *= (1 - 0.5 * breakLevel);
+            velY *= (1 - 0.5 * breakLevel);
+
+            radius = getCurrentRadius();
+        }
+        else {
+            visionRayResult1 = visionRayResult2 = visionRayResult3 = null;
+        }
         super.tick();
 
     }
+    private void renderVisionRay(ShiftableCanvas g, CollideLineResult collide, double rayAngle){
 
-
-
+        if(collide!=null){
+            double sina = Math.sin(rayAngle);
+            double cosa = Math.cos(rayAngle);
+            g.setColor(collide.Object.getMapColor());
+            g.drawLine(radius,radius, (float)(radius+ collide.Distance*cosa), (float)(radius-collide.Distance*sina));
+        }
+    }
     @Override
     public void render(ShiftableCanvas g) {
 
         int diameter = radius*2;
         Color base = Color.cyan;
+
+
+
+        if(energyLevel<=0)
+            base = Color.red;
+        double sina = Math.sin(angle);
+        double cosa = Math.cos(angle);
+        renderVisionRay(g, visionRayResult1, angle-0.2);
+        renderVisionRay(g, visionRayResult2, angle);
+        renderVisionRay(g, visionRayResult3, angle+0.2);
+
         int ang = (int)(angle*180/Math.PI);
 
         g.setColor(base);
@@ -110,28 +121,26 @@ public class PivaGamer extends CircleObject {
 
         g.setColor(Color.black);
         g.fillOval(diameter*15/100,diameter*15/100,diameter*70/100,diameter*70/100) ;
-
-        g.fillArc(0,0,diameter,diameter,ang+ 160, 40);
+        int offset = 2;
+        g.fillArc(-offset,-offset,diameter+2*offset,diameter+2*offset,ang+ 160, 40);
 
         //Throttle painting
         int negate = (int)(throttleLevel*255);
         g.setColor(new Color(255, 255-negate, 255-negate));
 
         int strokeWidth = 4;
-        double sina = Math.sin(angle);
-        double cosa = Math.cos(angle);
+
         int y = -(int)(sina*(radius-strokeWidth/2));
         int x = (int)(cosa*(radius-strokeWidth/2));
 
-        g.setStroke(new BasicStroke(strokeWidth));
+        g.setStroke(strokeWidth);
         g.drawLine(radius+x,radius+y , radius-x,radius-y);
         g.setColor(base);
-
-
-
 
         g.fillArc(0,0,diameter,diameter,ang-20, 40);
 
     }
-
+    private int getCurrentRadius(){
+        return minimumRadius+  (int)(Math.sqrt(energyLevel)/3);
+    }
 }

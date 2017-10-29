@@ -2,6 +2,8 @@ package com.tutorial.game;
 
 import com.tutorial.game.Cameras.ICamera;
 import com.tutorial.game.GameObjects.CircleObject;
+import com.tutorial.game.GameObjects.Piva.RandomBrain;
+import com.tutorial.game.GameObjects.PivaGamer;
 import com.tutorial.game.GameObjects.RectangleObject;
 import com.tutorial.game.GameObjects.Wall;
 
@@ -17,30 +19,28 @@ public class Handler  {
         this.worldWidth = worldWidth;
         kinematic= new Kinematic(this .objects,worldHeight, worldWidth);
         display = new Display(new ShiftableCanvas(camera), worldHeight, worldWidth);
-
-
     }
     Random r = new Random();
     public void  generateObjects(){
+        addObject(new PivaGamer(200,200,new RandomBrain(), this));
 
-        for(int times = 0; times<5; times++) {
+        for(int times = 0; times<20; times++) {
             addObject(new RectangleObject(getRndX(), getRndY(), 40, 60, 0));
            // addObject(new RectangleObject(getRndX(), getRndY(), 50, 200, 1));
             addObject(new CircleObject(getRndX(), getRndY(), 50, 0));
             addObject(new CircleObject(getRndX(), getRndY(), 100, 0));
           //  addObject(new CircleObject(getRndX(), getRndY(), 100, 5));
-          //  addObject(new CircleObject(getRndX(), getRndY(), 40, 0));
+            addObject(new CircleObject(getRndX(), getRndY(), 40, 0));
            // addObject(new CircleObject(getRndX(), getRndY(), 80, 1));
 
             for (int i = 0; i < 5; i++) {
              //   addObject(new CircleObject(getRndX(), getRndY(), 80,  1));
                // addObject(new CircleObject(getRndX(), getRndY(), 40, 6));
-               // addObject(new CircleObject(getRndX(), getRndY(), 10, 0));
+                addObject(new CircleObject(getRndX(), getRndY(), 10, 0));
                // addObject(new CircleObject(getRndX(), getRndY(), 5, 0));
-
             }
-
         }
+
         int wallWidth = 50;
         int offset = -100;
         //left vertical
@@ -91,5 +91,10 @@ public class Handler  {
     public void  removeObject(GameObject object){
         objectCount--;
         this.objects.remove(object);
+    }
+
+
+    public CollideLineResult collideLine(GameObject except, float x1, float y1, float angle, float lenght){
+        return kinematic.collideLine(except,x1,y1,angle,lenght);
     }
 }

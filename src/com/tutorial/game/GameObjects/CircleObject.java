@@ -1,5 +1,7 @@
 package com.tutorial.game.GameObjects;
 
+import com.tutorial.game.Collisions.ColideSide;
+import com.tutorial.game.Collisions.CollideCalculationResult;
 import com.tutorial.game.Collisions.CollisionTools;
 import com.tutorial.game.GameObject;
 import com.tutorial.game.Handler;
@@ -82,5 +84,13 @@ public class CircleObject extends GameObject {
 
     public void Collide( CircleObject target){
         CollisionTools.tryCollide(this, target);
+    }
+
+    @Override
+    public Point getFirstIntersectionWith(float x1, float y1, float x2, float y2) {
+        if(!CollisionTools.areIntersected((float)this.getCenterX(), (float)this.getCenterY(), radius, x1,y1,x2,y2))
+                return null;
+
+       return super.getFirstIntersectionWith(x1,y1,x2,y2);
     }
 }

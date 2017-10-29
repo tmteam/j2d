@@ -6,6 +6,78 @@ import com.tutorial.game.GameObject;
 import java.awt.*;
 
 public class CollisionTools {
+
+
+    // Проверка пересечения отрезка с кругом
+    // x,y,r - координаты круга
+// x01,y01,x02,y02 - координаты отрезка
+    public static Point getIntersected(float x, float y, float r, float x01, float y01, float x02, float y02)
+    {
+        //сдвигаем окружность и линию, так что окружность оказывается в начале координат
+        x01-= x; x02-= x; y01-= y; y02-= y;
+
+        float dx= x02 - x01;
+        float dy= y02 - y01;
+        float o = (x01*y02-x02*y01);
+
+        float a= dx*dx + dy*dy;
+
+        double sq = r*r*a-o*o;
+
+        if(sq==0){
+            //проходит по касательной.
+            return null;
+        }
+        if(sq<0){
+            //Мимо
+            return null;
+
+        }
+        sq = Math.sqrt(sq);
+
+        Point res1= new Point((int)(x-(dx* sq+dy*o)/a), (int)(y+(dy*sq-dx*o)/a));
+        Point res2= new Point((int)(x+(dx* sq-dy*o)/a), (int)(y-(dy*sq+dx*o)/a));
+
+
+        double minDist = res1.distance(x01,y01);
+
+        double dist2 = res2.distance(x01,y01);
+        if(dist2<minDist){
+            minDist = dist2;
+            res1 = res2;
+        }
+        if(minDist*minDist> a)
+            return null;
+        return res1;
+
+    }
+
+    // Проверка пересечения отрезка с кругом
+    // x,y,r - координаты круга
+// x01,y01,x02,y02 - координаты отрезка
+    public static boolean areIntersected(float x, float y, float r, float x01, float y01, float x02, float y02)
+    {
+        //сдвигаем окружность и линию, так что окружность оказывается в начале координат
+        x01-= x; x02-= x; y01-= y; y02-= y;
+
+        float dx= x02 - x01;
+        float dy= y02 - y01;
+
+        //составляем коэфициенты квадратного уравнения на перечение прямой и окружности.
+        //если на отрезке [0..1] есть отрицательные значения, значит отрезок пересекает окружность
+        float a= dx*dx + dy*dy;
+        float b= 2*(x01*dx + y01*dy);
+        float c= x01*x01 + y01*y01-r*r;
+
+        //а теперь проверяем, есть ли на отрезке [0..1] решения
+        if (-b < 0)
+            return (c < 0);
+        if (-b < (2*a))
+            return (4*a*c - b*b<0);
+
+        return (a+b+c <0);
+    }
+
     public static void ExchangeHMassVelocity(GameObject origin, GameObject target){
         //http://optoelectrosys.ru/teor/zakony-soxraneniya-energii-i-impulsa-uprugie-i-neuprugie-stolknoveniya-2.html
         double P =  origin.getVelX()*origin.getMass() + target.getVelX()*target.getMass();

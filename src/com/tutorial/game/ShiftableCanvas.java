@@ -35,8 +35,8 @@ public class ShiftableCanvas {
         objectX = (object.getX() + xOffset)*scale;
         objectY = (object.getY()+ yOffset)*scale;
     }
-    public void setStroke(Stroke stroke){
-        ((Graphics2D)currentGraphics).setStroke ( stroke );
+    public void setStroke(double width){
+        ((Graphics2D)currentGraphics).setStroke ( new BasicStroke((float)(width*scale)));
     }
     public void  drawLine(float x1, float y1, float x2, float y2){
         currentGraphics.drawLine((int)(x1*scale+ objectX),(int)(y1*scale+ objectY),(int)(x2*scale+ objectX),(int)(y2*scale+ objectY));

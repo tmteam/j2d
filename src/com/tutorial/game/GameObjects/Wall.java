@@ -1,6 +1,5 @@
 package com.tutorial.game.GameObjects;
 
-import com.tutorial.game.Handler;
 import com.tutorial.game.ShiftableCanvas;
 
 import java.awt.*;
@@ -9,7 +8,6 @@ public class Wall extends RectangleObject {
 
     public Wall(double x, double y, int height, int width) {
         super(x, y, height, width, 0);
-
     }
 
     public double getVelX() { return 0; }
@@ -19,6 +17,11 @@ public class Wall extends RectangleObject {
 
     public void setX(double x){}
     public void setY(double y){}
+
+    @Override
+    public Color getMapColor() {
+        return Color.magenta;
+    }
 
     public void  render(ShiftableCanvas canvas){
         canvas.setColor(new Color(25,25,25));

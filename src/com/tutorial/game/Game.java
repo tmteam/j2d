@@ -1,6 +1,7 @@
 package com.tutorial.game;
 
 import com.tutorial.game.Cameras.ManualCamera;
+import com.tutorial.game.GameObjects.Piva.HumanBrain;
 import com.tutorial.game.GameObjects.PivaGamer;
 import com.tutorial.game.Keyboard.CamerMoverConcreteKeyHandler;
 import com.tutorial.game.Keyboard.KeyHandler;
@@ -17,29 +18,29 @@ public class Game extends Canvas implements  Runnable {
 
     public Game() {
         ManualCamera camera = new ManualCamera();
-
-
-        handler = new Handler(camera,2000, 2000);
+        handler = new Handler(camera,5000, 5000);
         handler.setScreenSize(WIDTH, HEIGHT);
-
-
         new Window(WIDTH, HEIGHT, "HIHIHI", this);
-
         handler.generateObjects();
-        PivaGamer player = new PivaGamer(400,400,120);
-        handler.addObject(player);
+
+        HumanBrain player = new HumanBrain();
+
+        handler.addObject(new PivaGamer(400,400,player, handler));
 
         KeyHandler keyHandler = new KeyHandler();
         keyHandler.subscribe(new CamerMoverConcreteKeyHandler(camera));
         keyHandler.subscribe(new PlayerMoverConcreteKeyHandler(player));
-
         this.addKeyListener(keyHandler);
+
+
     }
+
     public synchronized  void start(){
         thread = new Thread(this);
         running = true;
         thread.start();
     }
+
     public synchronized void stop(){
         try {
             running = false;

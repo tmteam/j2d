@@ -20,6 +20,7 @@ public class Kinematic {
     }
     private SmartRectCollisionHandler rectsCollider = new SmartRectCollisionHandler();
     private CircleToRectCollisionHandler circleToRectCollisionHandler = new CircleToRectCollisionHandler();
+
     //int tick = 0;
     public void tick(){
       //  tick++;
@@ -67,6 +68,24 @@ public class Kinematic {
         }
     }
 
+    public CollideLineResult collideLine(GameObject except, float x1, float y1, float angle, float lenght){
+        CollideLineResult results = null;
+        float x2 = x1+ lenght*(float) Math.cos(angle);
+        float y2 = y1- lenght*(float) Math.sin(angle);
+
+        for(int i = 0; i<objects.size();i++) {
+            GameObject origin = objects.get(i);
+            if (origin == null || origin == except)
+                continue;
+            Point intersection =  origin.getFirstIntersectionWith(x1,y1,x2,y2);
+            if(intersection!=null){
+                results = new CollideLineResult(origin,intersection.distance(x1,y1));
+                x2 = intersection.x;
+                y2 = intersection.y;
+            }
+        }
+        return results;
+    }
 
     private void CorrectAreaBounds(GameObject origin, Rectangle originBounds) {
         if(origin instanceof Wall)
@@ -89,7 +108,4 @@ public class Kinematic {
             origin.x = worldWidth +offset - originBounds.width;
         }
     }
-
-
-
 }

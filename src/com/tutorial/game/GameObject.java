@@ -1,5 +1,8 @@
 package com.tutorial.game;
 
+import com.tutorial.game.Collisions.ColideSide;
+import com.tutorial.game.Collisions.CollideCalculationResult;
+
 import java.awt.*;
 
 public abstract class GameObject {
@@ -23,6 +26,18 @@ public abstract class GameObject {
     public double getX(){return x;}
     public double getY(){return y;}
 
+    public Point getFirstIntersectionWith(float x1, float y1, float x2, float y2){
+        Rectangle bounds = getBounds();
+        CollideCalculationResult collideCalc = new CollideCalculationResult(x1,y1,x2,y2);
+        collideCalc.checkSide(ColideSide.left,x,y,x,y+bounds.height);
+        collideCalc.checkSide(ColideSide.right,bounds.getMaxX(),y,bounds.getMaxX(),bounds.getMaxY());
+        collideCalc.checkSide(ColideSide.top,x,y,bounds.getMaxX(),y);
+        collideCalc.checkSide(ColideSide.bottom,x,bounds.getMaxY(),bounds.getMaxX(),bounds.getMaxY());
+
+        return collideCalc.collidePoint;
+    }
+
+    public Color getMapColor(){ return Color.white; }
 
     public void  setVelX(double velX){
         this.velX = velX;
