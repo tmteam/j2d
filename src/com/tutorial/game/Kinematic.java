@@ -6,14 +6,15 @@ import com.tutorial.game.GameObjects.CircleObject;
 import com.tutorial.game.GameObjects.Wall;
 
 import java.awt.*;
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class Kinematic {
-    private LinkedList<GameObject> objects;
+    private ArrayList<GameObject> objects;
     private int worldWidth;
     private int worldHeight;
 
-    public Kinematic(LinkedList<GameObject> objects, int worldWith, int worldHeight){
+    public Kinematic(ArrayList<GameObject> objects, int worldWith, int worldHeight){
         this.objects = objects;
         this.worldWidth = worldWith;
         this.worldHeight = worldHeight;

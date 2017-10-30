@@ -47,6 +47,12 @@ public class ShiftableCanvas {
     public void drawRect(float x, float y, int width, int height){
         currentGraphics.drawRect((int)(x*scale+ objectX), (int)(y*scale+ objectY), (int)(width*scale), (int)(height*scale));
     }
+    public void fillCircle(float x, float y, int radius){
+        currentGraphics.fillOval ((int)((x-radius)*scale+ objectX), (int)((y-radius)*scale+ objectY), (int)(2*radius*scale), (int)(2*radius*scale));
+    }
+    public void drawCircle(float x, float y, int radius){
+        currentGraphics.drawOval ((int)((x-radius)*scale+ objectX), (int)((y-radius)*scale+ objectY), (int)(2*radius*scale), (int)(2*radius*scale));
+    }
     public void fillOval(float x, float y, int width, int height){
         currentGraphics.fillOval ((int)(x*scale+ objectX), (int)(y*scale+ objectY), (int)(width*scale), (int)(height*scale));
     }
@@ -56,6 +62,12 @@ public class ShiftableCanvas {
     }
     public void  drawArc(float x, float y, int width, int height, int startAngle, int arcAngle){
         currentGraphics.drawArc((int)(x*scale+ objectX),(int)(y*scale+ objectY), width, height, startAngle, arcAngle);
+    }
+    public void  fillArc(float xCenter, float yCenter, int radius, int startAngle, int arcAngle){
+        currentGraphics.fillArc(
+                (int)((xCenter-radius)*scale+ objectX),
+                (int)((yCenter-radius)*scale+ objectY),
+                (int)(2*radius*scale), (int)(2*radius*scale), startAngle, arcAngle);
     }
     public void  fillArc(float x, float y, int width, int height, int startAngle, int arcAngle){
         currentGraphics.fillArc((int)(x*scale+ objectX),(int)(y*scale+ objectY), (int)(width*scale), (int)(height*scale), startAngle, arcAngle);

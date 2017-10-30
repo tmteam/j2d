@@ -41,12 +41,12 @@ public class CircleObject extends GameObject {
         return radius;
     }
 
-    public double getCenterX(){
-        return x+radius;
+    public float getCenterX(){
+        return (float) x+radius;
     }
 
-    public double getCenterY(){
-        return y+radius;
+    public float getCenterY(){
+        return (float) y+radius;
     }
 
     @Override

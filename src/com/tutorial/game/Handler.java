@@ -5,6 +5,7 @@ import com.tutorial.game.GameObjects.*;
 import com.tutorial.game.GameObjects.Piva.RandomBrain;
 
 import java.awt.*;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Random;
 
@@ -14,7 +15,7 @@ public class Handler  {
     public Handler(ICamera camera, int worldHeight, int worldWidth){
         this.worldHeight = worldHeight;
         this.worldWidth = worldWidth;
-        kinematic= new Kinematic(this .objects,worldHeight, worldWidth);
+        kinematic= new Kinematic(this.objects,worldHeight, worldWidth);
         display = new Display(new ShiftableCanvas(camera), worldHeight, worldWidth);
     }
     Random r = new Random();
@@ -64,7 +65,7 @@ public class Handler  {
     Display display;
     Kinematic kinematic;
 
-    LinkedList<GameObject> objects = new LinkedList<>();
+    ArrayList<GameObject> objects = new ArrayList<>();
 
     public void tick(){
         for (int i = 0; i< objects.size(); i++) {

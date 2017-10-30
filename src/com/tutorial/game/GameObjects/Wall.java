@@ -24,6 +24,7 @@ public class Wall extends RectangleObject {
     }
 
     public void  render(ShiftableCanvas canvas){
+        canvas.setStroke(2);
         canvas.setColor(new Color(25,25,25));
         canvas.fillRect(0,0,width,height);
         canvas.setColor(Color.magenta);

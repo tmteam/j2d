@@ -35,7 +35,7 @@ public class PivaGamer extends CircleObject {
 
     @Override
     public Color getMapColor(){
-        return Color.green;
+        return Color.cyan;
     }
     @Override
     public void tick(){
@@ -46,9 +46,9 @@ public class PivaGamer extends CircleObject {
             double sina = Math.sin(angle);
             double cosa = Math.cos(angle);
 
-            visionRayResult1 = handler.collideLine(this, (float)getCenterX(),(float)getCenterY(),(float)(angle-0.2), visionLenght);
+            visionRayResult1 = handler.collideLine(this, (float)getCenterX(),(float)getCenterY(),(float)(angle-0.4), visionLenght);
             visionRayResult2 = handler.collideLine(this, (float)getCenterX(),(float)getCenterY(),(float)(angle), visionLenght);
-            visionRayResult3 = handler.collideLine(this, (float)getCenterX(),(float)getCenterY(),(float)(angle+0.2), visionLenght);
+            visionRayResult3 = handler.collideLine(this, (float)getCenterX(),(float)getCenterY(),(float)(angle+0.4), visionLenght);
 
             brain.tick(null);
             turnLevel = brain.getTurnLevel();
@@ -88,63 +88,71 @@ public class PivaGamer extends CircleObject {
             g.drawLine(radius,radius, (float)(radius+ collide.Distance*cosa), (float)(radius-collide.Distance*sina));
         }
     }
+    int animateFrame = 0;
     @Override
     public void render(ShiftableCanvas g) {
-
         int diameter = radius*2;
         Color base = Color.cyan;
-
-
 
         if(energyLevel<=0)
             base = Color.red;
         double sina = Math.sin(angle);
         double cosa = Math.cos(angle);
-        renderVisionRay(g, visionRayResult1, angle-0.2);
-        renderVisionRay(g, visionRayResult2, angle);
-        renderVisionRay(g, visionRayResult3, angle+0.2);
 
+        renderVisionRay(g, visionRayResult1, angle-0.4);
+        //renderVisionRay(g, visionRayResult2, angle);
+        renderVisionRay(g, visionRayResult3, angle+0.4);
+
+
+        g.setColor(base);
+        g.setStroke(radius/5);
+        g.drawOval(0,0,diameter,diameter);
         int ang = (int)(angle*180/Math.PI);
 
+        g.fillArc(radius, radius, radius, ang+ 160, 40);
+
+
+        if(throttleLevel>0){
+            g.setColor(new Color(0xff4500));
+            g.fillArc(radius, radius,(int)(radius*(0.2+throttleLevel*1.5)), ang+ 170, 20);
+        }
         g.setColor(base);
+        g.fillCircle(radius,radius,radius/4);
 
-        g.fillOval(0,0,diameter,diameter) ;
+        animateFrame+=5;
+        if(animateFrame>3000)
+            animateFrame=0;
+        if(animateFrame>0 && animateFrame<500) {
 
-        //break painting
-        int breakNegate = (int)(breakLevel*255);
-        g.setColor(new Color(255, 255-breakNegate, 255-breakNegate));
-        g.fillArc(0,0,diameter,diameter,ang+ 200, 20);
-        g.fillArc(0,0,diameter,diameter,ang+ 140, 20);
+            g.setColor(new Color(Math.min(animateFrame,255),0,0));
+            g.fillCircle(radius,radius,radius/6);
+        }
 
 
-        g.setColor(Color.black);
-        g.fillOval(diameter*15/100,diameter*15/100,diameter*70/100,diameter*70/100) ;
-        int offset = 2;
-        g.fillArc(-offset,-offset,diameter+2*offset,diameter+2*offset,ang+ 160, 40);
-
-        //Throttle painting
-        int negate = (int)(throttleLevel*255);
-        g.setColor(new Color(255, 255-negate, 255-negate));
-
-        int strokeWidth = 4;
-
-        int y = -(int)(sina*(radius-strokeWidth/2));
-        int x = (int)(cosa*(radius-strokeWidth/2));
-
-        g.setStroke(strokeWidth);
-        g.drawLine(radius+x,radius+y , radius-x,radius-y);
         g.setColor(base);
+        DrawEye(g, (float)angle-0.4f ,Color.black); //visionRayResult1==null?Color.black:visionRayResult1.Object.getMapColor());
+        g.setColor(base);
+        DrawEye(g, (float)angle+0.4f,Color.black); //visionRayResult2==null?Color.black:visionRayResult2.Object.getMapColor());
+    }
 
-        g.fillArc(0,0,diameter,diameter,ang-20, 40);
+    private void DrawEye(ShiftableCanvas g, float eyeAngle, Color backColor) {
+        float cx = radius*(float)(1+ Math.cos(eyeAngle));
+        float cy =  radius*(float)(1- Math.sin(eyeAngle));
 
+        float eyeRadius = radius/5;
+        g.fillOval(cx-eyeRadius,cy-eyeRadius,(int)eyeRadius*2,(int)eyeRadius*2) ;
+        g.setColor(backColor);
+        float insideRadius = eyeRadius*0.75f;
+        g.fillOval(cx-insideRadius,cy-insideRadius,(int)insideRadius*2,(int)insideRadius*2) ;
     }
     @Override
     public void afterCollisionWith(GameObject o){
         if(o instanceof Donut){
             handler.removeObject(o);
-            energyLevel+=50000;
+            energyLevel+=5000;
         }
     }
+
     private int getCurrentRadius(){
         return minimumRadius+  (int)(Math.sqrt(energyLevel)/3);
     }
