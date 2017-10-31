@@ -77,6 +77,22 @@ public class PerceptronSettingsTest {
         assertArrayEquals(genom, randomSettings.toGenom(), 0.01);
     }
 
+    @Test
+    public void  randomGenomRecreates_AreSameReturnsTrue(){
+        int[] configuration = new int[]{2,3,4,5};
+        PerceptronSettings origin = PerceptronSettings.createRandom(configuration);
+        double[] genom = origin.toGenom();
+        PerceptronSettings recreated = PerceptronSettings.create(configuration,genom);
+        assertTrue(origin.isSimilarTo(origin));
+    }
+    @Test
+    public void  twoRandomlyCreated_AreNotSame(){
+        int[] configuration = new int[]{2,3,4,5,6,7};
+        PerceptronSettings a = PerceptronSettings.createRandom(configuration);
+        PerceptronSettings b = PerceptronSettings.createRandom(configuration);
+        assertFalse(a.isSimilarTo(b));
+    }
+
     private double[] createRandomGenomFor(int[] configuration) {
         PerceptronSettings settings= PerceptronSettings.create(configuration);
         double[] genom =  settings.toGenom();

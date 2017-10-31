@@ -1,5 +1,7 @@
 package com.neural;
 
+import java.util.Random;
+
 public class PerceptronSettings{
 
     private int inputCount;
@@ -48,6 +50,18 @@ public class PerceptronSettings{
                 hiddenCounts,
                 new double[weightsCount],
                 new double[neuronsCount]);
+    }
+
+    public static PerceptronSettings createRandom(int[] layersConfiguration){
+        PerceptronSettings ans = create(layersConfiguration);
+        Random rnd = new Random();
+        for(int i = 0; i< ans.offsets.length; i++){
+            ans.offsets[i] = rnd.nextDouble()-0.5;
+        }
+        for (int i = 0; i< ans.weights.length; i++){
+            ans.weights[i] = rnd.nextDouble()-0.5;
+        }
+        return ans;
     }
 
     public static PerceptronSettings create(int[] layersConfiguration, double[] genom){

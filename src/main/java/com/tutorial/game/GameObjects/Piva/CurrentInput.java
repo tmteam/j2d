@@ -10,7 +10,6 @@ public class CurrentInput{
 
     public SensorInfo sensor1;
     public SensorInfo sensor2;
-    public SensorInfo sensor3;
 
     public double energy;
 }

@@ -1,7 +1,10 @@
 package com.tutorial.game;
 
+import com.neural.Perceptron;
+import com.neural.PerceptronSettings;
 import com.tutorial.game.Cameras.ICamera;
 import com.tutorial.game.GameObjects.*;
+import com.tutorial.game.GameObjects.Piva.NeuralBrain;
 import com.tutorial.game.GameObjects.Piva.RandomBrain;
 
 import java.awt.*;
@@ -20,8 +23,11 @@ public class Handler  {
     }
     Random r = new Random();
     public void  generateObjects(){
-        addObject(new Piu(200,200,new RandomBrain(), this));
+        for (int i = 0; i<100; i++) {
 
+            PerceptronSettings set = PerceptronSettings.createRandom(new int[]{19,19,5,3});
+            addObject(new Piu(getRndX(), getRndY(), new NeuralBrain(new Perceptron(set)), this));
+        }
         for(int times = 0; times<20; times++) {
          //   addObject(new RectangleObject(getRndX(), getRndY(), 40, 60, 0));
            // addObject(new RectangleObject(getRndX(), getRndY(), 50, 200, 1));

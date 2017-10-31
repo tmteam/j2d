@@ -14,7 +14,7 @@ public class RandomBrain implements  IPivaBrain {
             tickCount = 0;
             throttleLevel = rnd.nextDouble();
             breakLevel = rnd.nextDouble();
-            turnLevel = rnd.nextDouble()*2 -1;
+            turnLevel = (rnd.nextDouble());
         }
         tickCount++;
     }

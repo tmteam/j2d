@@ -54,7 +54,7 @@ public class HumanBrain implements IPivaBrain {
         else
             breakLevel = 0;
 
-        double turnStep = 0.0001;
+        double turnStep = 0.01;
         if(leftPushed){
             turnLevel+=turnStep;
         }
@@ -62,9 +62,9 @@ public class HumanBrain implements IPivaBrain {
             turnLevel-= turnStep;
         }
         if(!leftPushed && !rightPushed){
-            turnLevel = 0;
+            turnLevel = 0.5;
         }
-        turnLevel= Tools.clamp(turnLevel,-0.1,0.1);
+        turnLevel= Tools.clamp(turnLevel,0,1);
 
     }
 
