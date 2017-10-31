@@ -16,7 +16,7 @@ public class neuron{
     }
 
     public double calc(){
-        double ans = Tools.exp(weightedInputSumm,1,offset);
+        double ans = Tools.exp(weightedInputSumm,offset);
         weightedInputSumm = 0;
         return ans;
     }
