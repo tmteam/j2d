@@ -1,8 +1,8 @@
 package com.tutorial.game;
 
 import com.tutorial.game.Cameras.ManualCamera;
+import com.tutorial.game.GameObjects.Piu;
 import com.tutorial.game.GameObjects.Piva.HumanBrain;
-import com.tutorial.game.GameObjects.PivaGamer;
 import com.tutorial.game.Keyboard.CamerMoverConcreteKeyHandler;
 import com.tutorial.game.Keyboard.KeyHandler;
 import com.tutorial.game.Keyboard.PlayerMoverConcreteKeyHandler;
@@ -25,7 +25,7 @@ public class Game extends Canvas implements  Runnable {
 
         HumanBrain player = new HumanBrain();
 
-        handler.addObject(new PivaGamer(400,400,player, handler));
+        handler.addObject(new Piu(400,400,player, handler));
 
         KeyHandler keyHandler = new KeyHandler();
         keyHandler.subscribe(new CamerMoverConcreteKeyHandler(camera));

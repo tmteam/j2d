@@ -1,12 +1,14 @@
 package com.tutorial.game.GameObjects;
 
-import com.tutorial.game.*;
+import com.tutorial.game.CollideLineResult;
+import com.tutorial.game.GameObject;
 import com.tutorial.game.GameObjects.Piva.IPivaBrain;
+import com.tutorial.game.Handler;
+import com.tutorial.game.ShiftableCanvas;
 
 import java.awt.*;
 
-public class PivaGamer extends CircleObject {
-
+public class Piu extends CircleObject {
     private IPivaBrain brain;
     private Handler handler;
     private double breakLevel;
@@ -27,7 +29,7 @@ public class PivaGamer extends CircleObject {
     private CollideLineResult visionRayResult2 = null;
     private CollideLineResult visionRayResult3 = null;
 
-    public PivaGamer(double x, double y, IPivaBrain brain, Handler handler){
+    public Piu(double x, double y, IPivaBrain brain, Handler handler){
         super(x, y, minimumRadius,0);
         this.brain = brain;
         this.handler = handler;
@@ -100,7 +102,7 @@ public class PivaGamer extends CircleObject {
         double cosa = Math.cos(angle);
 
         renderVisionRay(g, visionRayResult1, angle-0.4);
-        //renderVisionRay(g, visionRayResult2, angle);
+        renderVisionRay(g, visionRayResult2, angle);
         renderVisionRay(g, visionRayResult3, angle+0.4);
 
 
@@ -128,7 +130,8 @@ public class PivaGamer extends CircleObject {
             g.fillCircle(radius,radius,radius/6);
         }
 
-
+        g.setColor(base);
+        DrawEye(g, (float)angle ,Color.black);
         g.setColor(base);
         DrawEye(g, (float)angle-0.4f ,Color.black); //visionRayResult1==null?Color.black:visionRayResult1.Object.getMapColor());
         g.setColor(base);

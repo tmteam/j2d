@@ -20,7 +20,7 @@ public class Handler  {
     }
     Random r = new Random();
     public void  generateObjects(){
-        addObject(new PivaGamer(200,200,new RandomBrain(), this));
+        addObject(new Piu(200,200,new RandomBrain(), this));
 
         for(int times = 0; times<20; times++) {
          //   addObject(new RectangleObject(getRndX(), getRndY(), 40, 60, 0));
