@@ -2,21 +2,56 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cfdcb569-33fe-41c2-87a6-f61f60404517" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/neural/Perceptron.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/neural/PerceptronSettings.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/neural/PerceptronSettingsTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/neural/PerceptronTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/neural/Tools.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/neural/neuron.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Piu.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/tutorial/game/GameObjects/PivaGamer.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/Main.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/neural/Perceptron.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/neural/PerceptronSettings.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/neural/PerceptronSettingsTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/neural/PerceptronTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/neural/Tools.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/neural/neuron.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/tutorial/game/Cameras/CameraWrapper.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/tutorial/game/Cameras/FakeCamera.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/tutorial/game/Cameras/ICamera.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/tutorial/game/Cameras/ManualCamera.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/tutorial/game/CollideLineResult.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/tutorial/game/Collisions/CircleToRectCollisionHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/tutorial/game/Collisions/ColideSide.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/tutorial/game/Collisions/CollideCalculationResult.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/tutorial/game/Collisions/CollisionTools.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/tutorial/game/Collisions/CollisionToolsTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/tutorial/game/Collisions/SmartRectCollisionHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/tutorial/game/Collisions/StupidRectCollisionHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/tutorial/game/Display.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/tutorial/game/Game.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/tutorial/game/GameObject.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/tutorial/game/GameObjects/CircleObject.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Donut.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Piu.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Piva/CurrentInput.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Piva/HumanBrain.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Piva/IPivaBrain.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Piva/RandomBrain.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Piva/SensorInfo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/tutorial/game/GameObjects/RectangleObject.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Wall.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/tutorial/game/Handler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/tutorial/game/Keyboard/CamerMoverConcreteKeyHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/tutorial/game/Keyboard/IKeyConcreteHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/tutorial/game/Keyboard/KeyHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/tutorial/game/Keyboard/PlayerMoverConcreteKeyHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/tutorial/game/Kinematic.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/tutorial/game/ShiftableCanvas.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/tutorial/game/Tools.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/tutorial/game/Window.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/tutorial/game/Game.java" afterPath="$PROJECT_DIR$/src/com/tutorial/game/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/tutorial/game/Handler.java" afterPath="$PROJECT_DIR$/src/com/tutorial/game/Handler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/tutorial/game/Keyboard/PlayerMoverConcreteKeyHandler.java" afterPath="$PROJECT_DIR$/src/com/tutorial/game/Keyboard/PlayerMoverConcreteKeyHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/tutorial/game/Tools.java" afterPath="$PROJECT_DIR$/src/com/tutorial/game/Tools.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Games.iml" afterPath="$PROJECT_DIR$/Games.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +67,7 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Perceptron.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/neural/Perceptron.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/neural/Perceptron.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="188">
               <caret line="17" column="9" lean-forward="false" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
@@ -41,32 +76,67 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PerceptronTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/neural/PerceptronTest.java">
+      <file leaf-file-name="PerceptronTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/neural/PerceptronTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="modules.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="10" lean-forward="false" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Games.iml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Games.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+              <caret line="9" column="31" lean-forward="true" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NativeMethodAccessorImpl.class" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_144/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="136">
+              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Method.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_144/src.zip!/java/lang/reflect/Method.java">
+      <file leaf-file-name="Handler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/Handler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="497" column="0" lean-forward="false" selection-start-line="497" selection-start-column="0" selection-end-line="497" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="242">
+              <caret line="83" column="5" lean-forward="false" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
+              <folding>
+                <element signature="method#tick#0;class#Handler#0" expanded="false" />
+                <element signature="method#removeObject#0;class#Handler#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -91,16 +161,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReflectiveCallable.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ParentRunner.class" pinned="false" current-in-tab="false">
         <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/runners/ParentRunner.class">
           <provider selected="true" editor-type-id="text-editor">
@@ -113,26 +173,6 @@
                 <element signature="e#6484#6648#0" expanded="true" />
                 <element signature="e#6647#6648#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JUnitCore.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/runner/JUnitCore.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BlockJUnit4ClassRunner.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/runners/BlockJUnit4ClassRunner.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -169,8 +209,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/tutorial/game/Collisions/CollisionToolsTestOld.java" />
-        <option value="$PROJECT_DIR$/src/com/tutorial/game/Collisions/CollisionToolsTest.java" />
         <option value="$PROJECT_DIR$/src/com/tutorial/game/Collisions/SmartRectCollisionHandlerDouble.java" />
         <option value="$PROJECT_DIR$/src/com/tutorial/game/Roundy.java" />
         <option value="$PROJECT_DIR$/src/com/tutorial/game/Collisions/CircleToCircleCollisionHandler.java" />
@@ -220,6 +258,8 @@
         <option value="$PROJECT_DIR$/src/com/neural/PerceptronSettingsTest.java" />
         <option value="$PROJECT_DIR$/src/com/neural/Perceptron.java" />
         <option value="$PROJECT_DIR$/src/com/neural/PerceptronTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/company/Main.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -247,7 +287,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Games" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Games" type="616d4139:PackageViewModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -265,27 +315,51 @@
               <item name="Games" type="b2602c69:ProjectViewProjectNode" />
               <item name="Games" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Games" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Games" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Games" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Games" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Games" type="b2602c69:ProjectViewProjectNode" />
               <item name="Games" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="neural" type="462c0819:PsiDirectoryNode" />
+              <item name="company" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Games" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Games" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Games" type="cbb8eebc:String" user="Games" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scratches" />
     </panes>
   </component>
@@ -293,6 +367,9 @@
     <property name="extract.method.default.visibility" value="private" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -322,31 +399,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PerceptronTest.createEmptyWithHidden_calcReturnsHalfAndHalf">
-    <configuration name="PerceptronSettingsTest.create2x3x4x3_OffsetsCountEquals10" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.neural.*" />
+          <option name="PATTERN" value="com.company.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <module name="Games" />
+      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.neural" />
-      <option name="MAIN_CLASS_NAME" value="com.neural.PerceptronSettingsTest" />
-      <option name="METHOD_NAME" value="create2x3x4x3_OffsetsCountEquals10" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
+      <module name="Games" />
       <envs />
-      <patterns />
     </configuration>
     <configuration name="PerceptronTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
@@ -466,17 +537,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.PerceptronTest" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.PerceptronTest.createEmptyWithHidden_doesNotThrow" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.PerceptronSettingsTest.create2x3x4x3_OffsetsCountEquals10" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.PerceptronTest.createEmpty2x2_doesNotThrow" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.PerceptronTest.createEmptyWithHidden_calcReturnsHalfAndHalf" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.PerceptronTest.createEmpty2x2_doesNotThrow" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.PerceptronTest.createEmptyWithHidden_calcReturnsHalfAndHalf" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Main" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.PerceptronTest.createEmptyWithHidden_calcReturnsHalfAndHalf" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.PerceptronTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.PerceptronTest.createEmptyWithHidden_doesNotThrow" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.PerceptronTest.createEmpty2x2_doesNotThrow" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.PerceptronSettingsTest.create2x3x4x3_OffsetsCountEquals10" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.PerceptronTest.createEmptyWithHidden_calcReturnsHalfAndHalf" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.PerceptronTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.PerceptronTest.createEmptyWithHidden_doesNotThrow" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.PerceptronTest.createEmpty2x2_doesNotThrow" />
       </list>
     </recent_temporary>
   </component>
@@ -531,13 +602,13 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945737" sideWeight="0.49444443" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27390182" sideWeight="0.50277776" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27390182" sideWeight="0.5083333" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27390182" sideWeight="0.49722221" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27390182" sideWeight="0.49166667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -565,13 +636,13 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/tutorial/game/Collisions/CollisionToolsTest.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/tutorial/game/Collisions/CollisionToolsTest.java</url>
           <line>32</line>
           <properties />
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/tutorial/game/Collisions/CollisionToolsTest.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/tutorial/game/Collisions/CollisionToolsTest.java</url>
           <line>59</line>
           <properties />
           <option name="timeStamp" value="35" />
@@ -582,40 +653,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Cameras/ManualCamera.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Window.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="30" lean-forward="true" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Collisions/CollisionToolsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Collisions/StupidRectCollisionHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/Collisions/StupidRectCollisionHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
@@ -629,7 +667,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Keyboard/CamerMoverConcreteKeyHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/Keyboard/CamerMoverConcreteKeyHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="607">
           <caret line="40" column="9" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="40" selection-end-column="9" />
@@ -647,14 +685,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Piva/HumanBrain.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Piva/HumanBrain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Keyboard/PlayerMoverConcreteKeyHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/Keyboard/PlayerMoverConcreteKeyHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="10" column="41" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
@@ -664,7 +702,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Collisions/ColideSide.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/Collisions/ColideSide.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
@@ -672,7 +710,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Collisions/SmartRectCollisionHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/Collisions/SmartRectCollisionHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="33" column="22" lean-forward="false" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
@@ -680,7 +718,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Collisions/CollideCalculationResult.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/Collisions/CollideCalculationResult.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="103">
           <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
@@ -688,7 +726,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/CollideLineResult.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/CollideLineResult.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
@@ -696,14 +734,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Piva/RandomBrain.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Piva/RandomBrain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Cameras/FakeCamera.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/Cameras/FakeCamera.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
@@ -714,7 +752,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Keyboard/IKeyConcreteHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/Keyboard/IKeyConcreteHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
@@ -722,7 +760,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Collisions/CircleToRectCollisionHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/Collisions/CircleToRectCollisionHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
@@ -730,14 +768,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Piva/SensorInfo.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Piva/SensorInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/GameObjects/RectangleObject.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/RectangleObject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="35" column="23" lean-forward="false" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
@@ -745,7 +783,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/GameObject.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
@@ -759,7 +797,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Collisions/CollisionTools.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/Collisions/CollisionTools.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3434">
           <caret line="225" column="47" lean-forward="false" selection-start-line="225" selection-start-column="27" selection-end-line="225" selection-end-column="47" />
@@ -769,7 +807,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Wall.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Wall.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="30" column="15" lean-forward="true" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="15" />
@@ -789,7 +827,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Display.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/Display.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="259">
           <caret line="25" column="58" lean-forward="true" selection-start-line="25" selection-start-column="58" selection-end-line="25" selection-end-column="58" />
@@ -800,7 +838,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Kinematic.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/Kinematic.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
           <caret line="23" column="19" lean-forward="true" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
@@ -811,7 +849,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/GameObjects/CircleObject.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/CircleObject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
           <caret line="48" column="21" lean-forward="false" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
@@ -826,7 +864,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/ShiftableCanvas.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/ShiftableCanvas.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="52" column="17" lean-forward="false" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
@@ -836,7 +874,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Donut.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Donut.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="23" column="11" lean-forward="true" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
@@ -847,7 +885,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Piva/IPivaBrain.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Piva/IPivaBrain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="21" lean-forward="false" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
@@ -855,7 +893,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Keyboard/KeyHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/Keyboard/KeyHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
@@ -871,19 +909,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Handler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="36" lean-forward="false" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#tick#0;class#Handler#0" expanded="false" />
-            <element signature="method#removeObject#0;class#Handler#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Piva/CurrentInput.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Piva/CurrentInput.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
@@ -891,18 +917,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Piu.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Piu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="16" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="method#renderVisionRay#0;class#Piu#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Tools.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/Tools.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
@@ -910,18 +936,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/neural/neuron.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/neural/neuron.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
-            <element signature="e#146#147#0" expanded="true" />
-            <element signature="e#182#183#0" expanded="true" />
+            <element signature="e#146#147#0" expanded="false" />
+            <element signature="e#182#183#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/neural/Tools.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/neural/Tools.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="5" lean-forward="false" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
@@ -929,17 +955,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tutorial/game/Game.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/Game.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="20" column="28" lean-forward="false" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/neural/PerceptronSettingsTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/neural/PerceptronSettingsTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="14">
           <caret line="22" column="34" lean-forward="true" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
@@ -947,20 +973,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/neural/PerceptronSettings.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/neural/PerceptronSettings.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="67">
           <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
           <folding>
-            <element signature="e#1623#1624#0" expanded="true" />
-            <element signature="e#1656#1657#0" expanded="true" />
-            <element signature="e#1725#1726#0" expanded="true" />
-            <element signature="e#1762#1763#0" expanded="true" />
-            <element signature="e#1796#1797#0" expanded="true" />
-            <element signature="e#1832#1833#0" expanded="true" />
-            <element signature="e#1862#1863#0" expanded="true" />
-            <element signature="e#1902#1903#0" expanded="true" />
-            <element signature="e#1932#1933#0" expanded="true" />
+            <element signature="e#1623#1624#0" expanded="false" />
+            <element signature="e#1656#1657#0" expanded="false" />
+            <element signature="e#1725#1726#0" expanded="false" />
+            <element signature="e#1762#1763#0" expanded="false" />
+            <element signature="e#1796#1797#0" expanded="false" />
+            <element signature="e#1832#1833#0" expanded="false" />
+            <element signature="e#1862#1863#0" expanded="false" />
+            <element signature="e#1902#1903#0" expanded="false" />
+            <element signature="e#1932#1933#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1035,7 +1061,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/neural/Perceptron.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/neural/Perceptron.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
           <caret line="17" column="9" lean-forward="false" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
@@ -1043,13 +1069,134 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/neural/PerceptronTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/neural/PerceptronTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+        <state relative-caret-position="51">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="10" lean-forward="false" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Games.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/company/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/Handler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="83" column="5" lean-forward="false" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
+          <folding>
+            <element signature="method#tick#0;class#Handler#0" expanded="false" />
+            <element signature="method#removeObject#0;class#Handler#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="31" lean-forward="true" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Java-Gradle</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Games</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.65229887" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: com.google.code.gson:gson:2.8.2</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
