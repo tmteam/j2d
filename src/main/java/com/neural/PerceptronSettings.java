@@ -7,7 +7,9 @@ public class PerceptronSettings{
     private int[] hiddenCount;
     private double[] weights;
     private double[] offsets;
-
+    public static PerceptronSettings create(PerceptronSettingsInfo info){
+        return create(info.inputCount, info.outputCount, info.hiddenCount, info.weights, info.offsets);
+    }
     public static PerceptronSettings create(
             int inputCount,
             int outputCount,
@@ -46,9 +48,17 @@ public class PerceptronSettings{
                 new double[neuronsCount]);
     }
 
-    public int getNeuronsCount()
-    {
+    public PerceptronSettingsInfo getInfo(){
+        PerceptronSettingsInfo ans =new PerceptronSettingsInfo();
+        ans.hiddenCount = hiddenCount;
+        ans.inputCount = inputCount;
+        ans.offsets = offsets;
+        ans.weights = weights;
+        ans.outputCount = outputCount;
+        return ans;
+    }
 
+    public int getNeuronsCount() {
         return offsets.length + inputCount;
     }
 
