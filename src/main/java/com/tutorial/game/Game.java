@@ -11,7 +11,7 @@ import java.awt.*;
 import java.awt.image.BufferStrategy;
 
 public class Game extends Canvas implements  Runnable {
-    public static  final  int WIDTH = 800, HEIGHT = WIDTH/12*9;
+    public static  final  int WIDTH = 1200, HEIGHT = WIDTH/12*9;
     private Thread thread;
     private boolean running = false;
     private Handler handler;
@@ -26,7 +26,7 @@ public class Game extends Canvas implements  Runnable {
 
         HumanBrain player = new HumanBrain();
 
-        handler.addObject(new Piu(400,400,player, handler));
+        handler.addObjectAtRandomFreePlace(new Piu(300,300,player, handler));
 
         KeyHandler keyHandler = new KeyHandler();
         keyHandler.subscribe(new CamerMoverConcreteKeyHandler(camera));
@@ -54,7 +54,7 @@ public class Game extends Canvas implements  Runnable {
 
     public void  run(){
         long lasttime = System.nanoTime();
-        double amountOfTicks = 60.0;
+        double amountOfTicks = 30;
         double ns = 1000000000/amountOfTicks;
         double delta = 0;
         long timer = System.currentTimeMillis();

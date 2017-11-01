@@ -16,7 +16,7 @@ public class Piu extends CircleObject {
     private IPivaBrain brain;
     private Handler handler;
 
-    private double energyLevel =100000;
+    private double energyLevel =400000;
 
 
     private static final int minimumRadius = 40;
@@ -28,6 +28,7 @@ public class Piu extends CircleObject {
         this.brain = brain;
         this.handler = handler;
         currentBehaviour = new PiuAliveBehaviour(this, brain,handler);
+        radius = getCurrentRadius();
     }
     public void  setEnergyLevel(double value){
         energyLevel =  value;

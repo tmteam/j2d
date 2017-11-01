@@ -3,6 +3,7 @@ package com.tutorial.game;
 import com.tutorial.game.Collisions.CircleToRectCollisionHandler;
 import com.tutorial.game.Collisions.SmartRectCollisionHandler;
 import com.tutorial.game.GameObjects.CircleObject;
+import com.tutorial.game.GameObjects.RectangleObject;
 import com.tutorial.game.GameObjects.Wall;
 
 import java.awt.*;
@@ -20,7 +21,16 @@ public class Kinematic {
         this.worldHeight = worldHeight;
     }
 
-
+    public boolean areIntersected(Rectangle rect){
+        for(int i = 0; i<objects.size();i++) {
+            GameObject origin = objects.get(i);
+            if (origin == null)
+                continue;
+            if(origin.getBounds().intersects(rect))
+                return true;
+        }
+        return false;
+    }
     //int tick = 0;
     public void tick(){
       //  tick++;

@@ -13,7 +13,7 @@ public class Donut extends CircleObject {
     @Override
     public void render(ShiftableCanvas canvas){
         canvas.setStroke(radius/2);
-        canvas.setColor(Color.green);// new Color(0x6495ED));
+        canvas.setColor(Color.orange);// new Color(0x6495ED));
         canvas.drawCircle(radius,radius,radius);
     }
 

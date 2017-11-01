@@ -26,16 +26,7 @@ public class Handler  {
     }
     Random r = new Random();
     public void  generateObjects(){
-        for (int i = 0; i<100; i++) {
 
-            PerceptronSettings set = PerceptronSettings.createRandom(new int[]{19,19,5,3});
-            addObject(new Piu(getRndX(), getRndY(), new NeuralBrain(new Perceptron(set)), this));
-            piusCount++;
-        }
-        for(int times = 0; times<50; times++) {
-            addObject(new Donut(getRndX(), getRndY(), 50, 0));
-            donutCount++;
-        }
 
         int wallWidth = 50;
         int offset = -100;
@@ -50,6 +41,16 @@ public class Handler  {
 
         addObject(new Wall(500,500,500,wallWidth));
 
+
+        for (int i = 0; i<100; i++) {
+            PerceptronSettings set = PerceptronSettings.createRandom(new int[]{19,19,5,3});
+            addObjectAtRandomFreePlace(new Piu(0,0, new NeuralBrain(new Perceptron(set)), this));
+            piusCount++;
+        }
+        for(int times = 0; times<150; times++) {
+            addObjectAtRandomFreePlace(new Donut(0,0, 50, 0));
+            donutCount++;
+        }
     }
 
     double getRndX(){
@@ -87,9 +88,22 @@ public class Handler  {
         display.Render(g,objects);
     }
     int objectCount = 0;
-    
+
     public int getObjectCount(){
         return objectCount;
+    }
+
+    public boolean  addObjectAtRandomFreePlace(GameObject object){
+        for (int i = 0; i < 1000; i++) {
+
+            if(!kinematic.areIntersected(object.getBounds())) {
+                addObject(object);
+                return true;
+            }
+            object.setX(getRndX());
+            object.setY(getRndY());
+        }
+        return false;
     }
 
     public void  addObject(GameObject object){
