@@ -18,7 +18,7 @@ public class WorldMap {
     public int getHeight(){return height;}
     public int getWidth(){return  width;}
 
-    public void  DrawMap(IWorldHandler handler){
+    public void  DrawMap(ISurfaceWorldHandler handler){
 
         int wallWidth = 50;
         int offset = -100;

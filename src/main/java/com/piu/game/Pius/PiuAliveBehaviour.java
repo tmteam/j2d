@@ -1,17 +1,17 @@
 package com.piu.game.Pius;
 
-import com.piu.game.GenerationHandler;
 import com.piu.engine.CollideLineResult;
 import com.piu.engine.GameObject;
 import com.piu.engine.ShiftableCanvas;
 import com.piu.game.Donut;
+import com.piu.game.Levels.GenerationLevel;
 
 import java.awt.*;
 
 public class PiuAliveBehaviour implements IPiuBehaviour {
     private Piu piu;
     private IPivaBrain brain;
-    private GenerationHandler handler;
+    private GenerationLevel handler;
     private double breakLevel;
     private double throttleLevel;
     private double turnLevel;
@@ -26,7 +26,7 @@ public class PiuAliveBehaviour implements IPiuBehaviour {
     private CollideLineResult visionRayResult1 = null;
     private CollideLineResult visionRayResult2 = null;
 
-    public PiuAliveBehaviour(Piu piu, IPivaBrain brain, GenerationHandler handler){
+    public PiuAliveBehaviour(Piu piu, IPivaBrain brain, GenerationLevel handler){
         this.piu = piu;
         this.brain = brain;
         this.handler = handler;

@@ -13,38 +13,63 @@ public class Hid implements IRenderable {
     private int donnutsCount;
     private int piusCount;
 
+    private int previousGen;
+    private int lastGenBestFit;
+    private int lastGenDonnutsEaten;
+    private int lastGenMedian;
+    private int lastGenAverage;
+
     public Hid(int top, int left){
 
         this.top = top;
         this.left = left;
     }
-    public void  SetCurrentGameInfo(int donnutsCount, int piusCount){
+    public void  SetLastGenerationInfo(int previousGen, int bestFit, int donutsEaten, int median, int average){
+        this.previousGen = previousGen;
+        this.lastGenBestFit = bestFit;
+        this.lastGenDonnutsEaten = donutsEaten;
+        this.lastGenAverage = average;
+        this.lastGenMedian = median;
+    }
+    public void  SetCurrentGameInfo(int donnutsCount, int piusCount,int generationTick){
 
         this.donnutsCount = donnutsCount;
         this.piusCount = piusCount;
+        this.ticks = generationTick;
     }
-    public void  SetCurrentGraphInfo(int fps, int tps, int ticks){
+    public void  SetCurrentGraphInfo(int fps, int tps){
 
         this.fps = fps;
         this.tps = tps;
-        this.ticks = ticks;
     }
 
     public void render(Graphics g){
 
         g.setColor(Color.black);
-        g.fillRect(top,left,100,200);
+        g.fillRect(top,left,100,300);
         g.setColor(Color.darkGray);
         ((Graphics2D)g).setStroke(new BasicStroke(4f));
-        g.drawRect(top,left,100,200);
+        g.drawRect(top,left,100,300);
         g.setColor(Color.WHITE);
 
-        g.drawString( "fps: "+ fps,left+15,top+20);
-        g.drawString( "tps: "+ tps,left+15,top+40);
-        g.drawString( "ticks: "+ ticks,left+15,top+60);
-
-        g.drawString( "donuts: "+ donnutsCount,left+15,top+80);
-        g.drawString( "pius: "+ piusCount,left+15,top+100);
-
+        drawStrings(g, left+15, top+20,new String[]{
+                "fps: "+ fps,
+                "tps: "+ tps,
+                "------------",
+                "ticks: "+ ticks,
+                "donuts: "+ donnutsCount,
+                "pius: "+ piusCount,
+                "------------",
+                "gen: "+ previousGen,
+                "best: "+ lastGenBestFit,
+                "average: "+ lastGenAverage,
+                "median: "+ lastGenMedian,
+                "eaten: "+ lastGenDonnutsEaten,
+        });
+    }
+    private void drawStrings(Graphics g, int left, int top, String[] lines ){
+        for (int i = 0; i < lines.length; i++) {
+            g.drawString( lines[i],left,top+i*20);
+        }
     }
 }

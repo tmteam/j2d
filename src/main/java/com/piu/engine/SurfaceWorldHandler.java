@@ -4,7 +4,7 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class LevelHandler implements IWorldHandler {
+public class SurfaceWorldHandler implements ISurfaceWorldHandler {
 
     private final int worldwidth;
     private final int worldheight;
@@ -12,7 +12,7 @@ public class LevelHandler implements IWorldHandler {
     Kinematic kinematic;
 
     ArrayList<GameObject> objects = new ArrayList<>();
-    public LevelHandler(Display display, int worldwidth, int worldheight){
+    public SurfaceWorldHandler(Display display, int worldwidth, int worldheight){
         this.worldwidth = worldwidth;
         this.worldheight = worldheight;
 

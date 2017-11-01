@@ -1,23 +1,23 @@
 package com.piu.game.Pius;
 
-import com.piu.game.GenerationHandler;
 import com.piu.engine.GameObject;
 import com.piu.engine.ShiftableCanvas;
 import com.piu.engine.GameObjects.CircleObject;
+import com.piu.game.Levels.GenerationLevel;
 
 import java.awt.*;
 
 public class Piu extends CircleObject {
     private IPivaBrain brain;
-    private GenerationHandler handler;
+    private GenerationLevel handler;
 
-    private double energyLevel =400000;
+    private double energyLevel = 100000;
 
     private static final int minimumRadius = 40;
 
     private IPiuBehaviour currentBehaviour;
 
-    public Piu(IPivaBrain brain, GenerationHandler handler){
+    public Piu(IPivaBrain brain, GenerationLevel handler){
         super(0, 0, minimumRadius,0);
         this.brain = brain;
         this.handler = handler;

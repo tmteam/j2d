@@ -2,7 +2,7 @@ package com.piu.game.Pius;
 
 import com.neural.Perceptron;
 import com.neural.PerceptronSettings;
-import com.piu.game.GenerationHandler;
+import com.piu.game.Levels.GenerationLevel;
 
 public class PiuFactory {
 
@@ -14,7 +14,7 @@ public class PiuFactory {
 
         this.brain = brain;
     }
-    public Piu createFor(GenerationHandler handler){
+    public Piu createFor(GenerationLevel handler){
         return new Piu(brain, handler);
     }
 }
