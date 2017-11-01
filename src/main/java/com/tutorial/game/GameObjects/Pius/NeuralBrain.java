@@ -1,8 +1,6 @@
-package com.tutorial.game.GameObjects.Piva;
+package com.tutorial.game.GameObjects.Pius;
 
 import com.neural.Perceptron;
-
-import java.util.ArrayList;
 
 public class NeuralBrain implements IPivaBrain {
 

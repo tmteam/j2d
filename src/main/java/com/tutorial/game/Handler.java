@@ -4,12 +4,11 @@ import com.neural.Perceptron;
 import com.neural.PerceptronSettings;
 import com.tutorial.game.Cameras.ICamera;
 import com.tutorial.game.GameObjects.*;
-import com.tutorial.game.GameObjects.Piva.NeuralBrain;
-import com.tutorial.game.GameObjects.Piva.RandomBrain;
+import com.tutorial.game.GameObjects.Pius.NeuralBrain;
+import com.tutorial.game.GameObjects.Pius.Piu;
 
 import java.awt.*;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.Random;
 
 public class Handler  {

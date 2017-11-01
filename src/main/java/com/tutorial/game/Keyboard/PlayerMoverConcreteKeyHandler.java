@@ -1,6 +1,6 @@
 package com.tutorial.game.Keyboard;
 
-import com.tutorial.game.GameObjects.Piva.HumanBrain;
+import com.tutorial.game.GameObjects.Pius.HumanBrain;
 
 import java.awt.event.KeyEvent;
 

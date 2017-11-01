@@ -1,4 +1,4 @@
-package com.tutorial.game.GameObjects.Piva;
+package com.tutorial.game.GameObjects.Pius;
 
 public interface IPivaBrain {
     void tick(CurrentInput input);

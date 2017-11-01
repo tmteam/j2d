@@ -1,6 +1,4 @@
-package com.tutorial.game.GameObjects.Piva;
-
-import java.awt.*;
+package com.tutorial.game.GameObjects.Pius;
 
 public class CurrentInput{
     public double velX;

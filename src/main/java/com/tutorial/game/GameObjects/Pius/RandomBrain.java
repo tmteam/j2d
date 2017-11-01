@@ -1,4 +1,4 @@
-package com.tutorial.game.GameObjects.Piva;
+package com.tutorial.game.GameObjects.Pius;
 
 import java.util.Random;
 

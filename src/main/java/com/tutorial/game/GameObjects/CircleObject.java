@@ -24,6 +24,9 @@ public class CircleObject extends GameObject {
         angle =0;
         angleVelocity = 0.00;
     }
+    public double getAngle(){
+        return angle;
+    }
     public  double getInertionMoment(){
         return getMass()*radius*radius/2;
     }

@@ -1,8 +1,8 @@
 package com.tutorial.game;
 
 import com.tutorial.game.Cameras.ManualCamera;
-import com.tutorial.game.GameObjects.Piu;
-import com.tutorial.game.GameObjects.Piva.HumanBrain;
+import com.tutorial.game.GameObjects.Pius.Piu;
+import com.tutorial.game.GameObjects.Pius.HumanBrain;
 import com.tutorial.game.Keyboard.CamerMoverConcreteKeyHandler;
 import com.tutorial.game.Keyboard.KeyHandler;
 import com.tutorial.game.Keyboard.PlayerMoverConcreteKeyHandler;

@@ -2,18 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cfdcb569-33fe-41c2-87a6-f61f60404517" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/genetics/IMutator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/genetics/Tools.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Piva/NeuralBrain.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Pius/IPiuBehaviour.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Pius/PiuAliveBehaviour.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Pius/PiuDeadBehaviour.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/neural/PerceptronSettings.java" afterPath="$PROJECT_DIR$/src/main/java/com/neural/PerceptronSettings.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/neural/PerceptronSettingsTest.java" afterPath="$PROJECT_DIR$/src/main/java/com/neural/PerceptronSettingsTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Piu.java" afterPath="$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Piu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Piva/CurrentInput.java" afterPath="$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Piva/CurrentInput.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Piva/HumanBrain.java" afterPath="$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Piva/HumanBrain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Piva/RandomBrain.java" afterPath="$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Piva/RandomBrain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Piva/SensorInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Piva/SensorInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/game/Game.java" afterPath="$PROJECT_DIR$/src/main/java/com/tutorial/game/Game.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/CircleObject.java" afterPath="$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/CircleObject.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/game/Handler.java" afterPath="$PROJECT_DIR$/src/main/java/com/tutorial/game/Handler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/game/Keyboard/PlayerMoverConcreteKeyHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/tutorial/game/Keyboard/PlayerMoverConcreteKeyHandler.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Piu.java" afterPath="$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Pius/Piu.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Piva/CurrentInput.java" afterPath="$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Pius/CurrentInput.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Piva/HumanBrain.java" afterPath="$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Pius/HumanBrain.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Piva/IPivaBrain.java" afterPath="$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Pius/IPivaBrain.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Piva/NeuralBrain.java" afterPath="$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Pius/NeuralBrain.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Piva/RandomBrain.java" afterPath="$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Pius/RandomBrain.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Piva/SensorInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Pius/SensorInfo.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -32,7 +35,7 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="RandomBrain.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Piva/RandomBrain.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Pius/RandomBrain.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="123">
               <caret line="13" column="26" lean-forward="true" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
@@ -65,25 +68,61 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HumanBrain.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Piva/HumanBrain.java">
+      <file leaf-file-name="Piu.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Pius/Piu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="57" column="23" lean-forward="true" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
-              <folding />
+            <state relative-caret-position="323">
+              <caret line="31" column="38" lean-forward="false" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
+              <folding>
+                <element signature="e#1076#1077#0" expanded="true" />
+                <element signature="e#1144#1145#0" expanded="true" />
+                <element signature="e#1181#1182#0" expanded="true" />
+                <element signature="e#1215#1216#0" expanded="true" />
+                <element signature="e#1262#1263#0" expanded="true" />
+                <element signature="e#1315#1316#0" expanded="true" />
+                <element signature="e#1673#1674#0" expanded="true" />
+                <element signature="e#1729#1730#0" expanded="true" />
+                <element signature="e#1795#1796#0" expanded="true" />
+                <element signature="e#1849#1850#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Piu.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Piu.java">
+      <file leaf-file-name="PiuAliveBehaviour.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Pius/PiuAliveBehaviour.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="24" column="39" lean-forward="true" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+            <state relative-caret-position="211">
+              <caret line="138" column="0" lean-forward="true" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
               <folding>
-                <element signature="method#tick#0;class#Piu#0" expanded="false" />
-                <element signature="method#renderVisionRay#0;class#Piu#0" expanded="false" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1073#1074#0" expanded="true" />
+                <element signature="e#1106#1107#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PiuDeadBehaviour.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Pius/PiuDeadBehaviour.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="30" lean-forward="false" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#248#249#0" expanded="true" />
+                <element signature="e#281#282#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IPiuBehaviour.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Pius/IPiuBehaviour.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="12" column="59" lean-forward="false" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -91,11 +130,13 @@
       <file leaf-file-name="CircleObject.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/CircleObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="264">
+              <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
               <folding>
-                <element signature="e#1295#1296#0" expanded="true" />
-                <element signature="e#1331#1332#0" expanded="true" />
+                <element signature="e#730#731#0" expanded="true" />
+                <element signature="e#758#759#0" expanded="true" />
+                <element signature="e#1353#1354#0" expanded="true" />
+                <element signature="e#1389#1390#0" expanded="true" />
                 <element signature="method#render#0;class#CircleObject#0" expanded="false" />
               </folding>
             </state>
@@ -103,33 +144,13 @@
         </entry>
       </file>
       <file leaf-file-name="NeuralBrain.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Piva/NeuralBrain.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Pius/NeuralBrain.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="271">
-              <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+              <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoopPipe.class" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_144/jre/lib/rt.jar!/sun/java2d/pipe/LoopPipe.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/Game.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="27" column="23" lean-forward="false" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -138,7 +159,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/Handler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="191">
-              <caret line="28" column="62" lean-forward="false" selection-start-line="28" selection-start-column="62" selection-end-line="28" selection-end-column="62" />
+              <caret line="27" column="62" lean-forward="false" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
               <folding>
                 <element signature="method#tick#0;class#Handler#0" expanded="false" />
                 <element signature="method#removeObject#0;class#Handler#0" expanded="false" />
@@ -154,8 +175,8 @@
       <list>
         <option value="Enum" />
         <option value="JUnit5 Test Class" />
-        <option value="Interface" />
         <option value="JUnit4 Test Class" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -179,11 +200,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/tutorial/game/Keyboard/CamerMoverConcreteKeyHandler.java" />
-        <option value="$PROJECT_DIR$/src/com/tutorial/game/Keyboard/KeyHandler.java" />
-        <option value="$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Piva/IPivaBrain.java" />
-        <option value="$PROJECT_DIR$/src/com/tutorial/game/Keyboard/PlayerMoverConcreteKeyHandler.java" />
-        <option value="$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Piva/RandomBrain.java" />
         <option value="$PROJECT_DIR$/src/com/tutorial/game/GameObjects/Piva/HumanBrain.java" />
         <option value="$PROJECT_DIR$/src/com/tutorial/game/Collisions/ColideSide.java" />
         <option value="$PROJECT_DIR$/src/com/tutorial/game/Collisions/SmartRectCollisionHandler.java" />
@@ -230,6 +246,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Piva/HumanBrain.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/neural/PerceptronSettings.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Piu.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/CircleObject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Pius/IPiuBehaviour.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Pius/PiuDeadBehaviour.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Pius/Piu.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Pius/PiuAliveBehaviour.java" />
       </list>
     </option>
   </component>
@@ -360,7 +381,7 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="game" type="462c0819:PsiDirectoryNode" />
               <item name="GameObjects" type="462c0819:PsiDirectoryNode" />
-              <item name="Piva" type="462c0819:PsiDirectoryNode" />
+              <item name="Pius" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Games" type="b2602c69:ProjectViewProjectNode" />
@@ -385,15 +406,18 @@
       <recent name="com.neural" />
       <recent name="com.tutorial.game.Collisions" />
     </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-      <recent name="groovy.util.GroovyTestCase" />
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.tutorial.game.GameObjects.Pius" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.tutorial.game.GameObjects" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.tutorial.game.Collisions" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+      <recent name="groovy.util.GroovyTestCase" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -657,8 +681,8 @@
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Piva/NeuralBrain.java</url>
-          <line>54</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Pius/NeuralBrain.java</url>
+          <line>52</line>
           <properties />
           <option name="timeStamp" value="120" />
         </line-breakpoint>
@@ -668,29 +692,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/Collisions/CollideCalculationResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/CollideLineResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/Cameras/FakeCamera.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/Keyboard/IKeyConcreteHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -702,6 +703,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -800,7 +802,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Piva/IPivaBrain.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Pius/IPivaBrain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="21" lean-forward="false" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
@@ -898,7 +900,7 @@
         <state relative-caret-position="221">
           <caret line="13" column="47" lean-forward="true" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="e#311#312#0" expanded="false" />
             <element signature="e#365#366#0" expanded="false" />
           </folding>
@@ -969,8 +971,8 @@
         <state relative-caret-position="85">
           <caret line="5" column="5" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
           <folding>
-            <element signature="e#99#100#0" expanded="true" />
-            <element signature="e#156#157#0" expanded="true" />
+            <element signature="e#99#100#0" expanded="false" />
+            <element signature="e#156#157#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -999,7 +1001,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Piva/SensorInfo.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Pius/SensorInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="42" lean-forward="false" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
@@ -1007,7 +1009,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Piva/CurrentInput.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Pius/CurrentInput.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
@@ -1031,19 +1033,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/CircleObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="e#1295#1296#0" expanded="true" />
-            <element signature="e#1331#1332#0" expanded="true" />
-            <element signature="method#render#0;class#CircleObject#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Piva/HumanBrain.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Pius/HumanBrain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="293">
           <caret line="57" column="23" lean-forward="true" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
@@ -1054,7 +1044,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/Handler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
-          <caret line="28" column="62" lean-forward="false" selection-start-line="28" selection-start-column="62" selection-end-line="28" selection-end-column="62" />
+          <caret line="27" column="62" lean-forward="false" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
           <folding>
             <element signature="method#tick#0;class#Handler#0" expanded="false" />
             <element signature="method#removeObject#0;class#Handler#0" expanded="false" />
@@ -1062,17 +1052,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Piva/NeuralBrain.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Pius/NeuralBrain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="271">
-          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Piva/RandomBrain.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Pius/RandomBrain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="123">
           <caret line="13" column="26" lean-forward="true" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
@@ -1100,13 +1090,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Piu.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/CircleObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="24" column="39" lean-forward="true" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+        <state relative-caret-position="264">
+          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
           <folding>
-            <element signature="method#tick#0;class#Piu#0" expanded="false" />
-            <element signature="method#renderVisionRay#0;class#Piu#0" expanded="false" />
+            <element signature="e#730#731#0" expanded="true" />
+            <element signature="e#758#759#0" expanded="true" />
+            <element signature="e#1353#1354#0" expanded="true" />
+            <element signature="e#1389#1390#0" expanded="true" />
+            <element signature="method#render#0;class#CircleObject#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Pius/IPiuBehaviour.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="59" lean-forward="false" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Pius/PiuDeadBehaviour.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="30" lean-forward="false" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#248#249#0" expanded="true" />
+            <element signature="e#281#282#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Pius/Piu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="31" column="38" lean-forward="false" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
+          <folding>
+            <element signature="e#1076#1077#0" expanded="true" />
+            <element signature="e#1144#1145#0" expanded="true" />
+            <element signature="e#1181#1182#0" expanded="true" />
+            <element signature="e#1215#1216#0" expanded="true" />
+            <element signature="e#1262#1263#0" expanded="true" />
+            <element signature="e#1315#1316#0" expanded="true" />
+            <element signature="e#1673#1674#0" expanded="true" />
+            <element signature="e#1729#1730#0" expanded="true" />
+            <element signature="e#1795#1796#0" expanded="true" />
+            <element signature="e#1849#1850#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tutorial/game/GameObjects/Pius/PiuAliveBehaviour.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="138" column="0" lean-forward="true" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1073#1074#0" expanded="true" />
+            <element signature="e#1106#1107#0" expanded="true" />
           </folding>
         </state>
       </provider>
