@@ -8,15 +8,16 @@ import java.util.List;
 public class Display {
 
     private ShiftableCanvas canvas;
+    private Hid hid;
     private int worldWidth = 2000;
     private int worldHeight = 2000;
     private int screenWidth = 600;
     private int screenHeight = 800;
-
-    public Display(ShiftableCanvas canvas, int worldWidth, int woldHeight){
+    public Display(ShiftableCanvas canvas, int worldWidth, int woldHeight, Hid hid){
         this.worldWidth = worldWidth;
         this.worldHeight = woldHeight;
         this.canvas = canvas;
+        this.hid = hid;
     }
     public void setScreenSize(int screenWidth, int screenHeight)
     {
@@ -54,5 +55,7 @@ public class Display {
                 obj.render(canvas);
             }
         }
+        //Paint hid
+        hid.render(g);
     }
 }

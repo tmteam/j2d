@@ -49,6 +49,7 @@ public class Piu extends CircleObject {
         if(energyLevel<=0 && isAlive()){
             //It is death
             currentBehaviour = new PiuDeadBehaviour();
+            handler.notifyPiusDeath(this);
         }
         angleVelocity *= 0.99;
         radius = getCurrentRadius();

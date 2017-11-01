@@ -15,10 +15,11 @@ public class Game extends Canvas implements  Runnable {
     private Thread thread;
     private boolean running = false;
     private Handler handler;
-
+    private Hid hid;
     public Game() {
         ManualCamera camera = new ManualCamera();
-        handler = new Handler(camera,5000, 5000);
+        hid = new Hid(0,0);
+        handler = new Handler(camera,hid,5000, 5000);
         handler.setScreenSize(WIDTH, HEIGHT);
         new Window(WIDTH, HEIGHT, "HIHIHI", this);
         handler.generateObjects();
@@ -57,22 +58,28 @@ public class Game extends Canvas implements  Runnable {
         double ns = 1000000000/amountOfTicks;
         double delta = 0;
         long timer = System.currentTimeMillis();
-        int frames = 0;
+        int framesPerSecond = 0;
+        int ticksPerSeconnd = 0;
+        int ticks = 0;
+
         while (running){
             long now = System.nanoTime();
             delta+=(now - lasttime)/ns;
             lasttime = now;
             while(delta>=1){
                 tick();
+                ticks++;
+                ticksPerSeconnd++;
                 delta--;
             }
             if(running)
                 render();
-            frames++;
+            framesPerSecond++;
             if(System.currentTimeMillis() -timer>2000){
                 timer+=2000;
-                System.out.println("FPS: "+ frames+" Count: "+ handler.getObjectCount());
-                frames = 0;
+                hid.SetCurrentGraphInfo(framesPerSecond,ticksPerSeconnd,ticks);
+                framesPerSecond = 0;
+                ticksPerSeconnd=0;
             }
         }
         stop();

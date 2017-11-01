@@ -175,7 +175,7 @@ public class PiuAliveBehaviour implements IPiuBehaviour {
     @Override
     public void afterCollisionWith(GameObject o){
         if(o instanceof Donut){
-            handler.removeObject(o);
+            handler.notifyDonnutEaten((Donut)o);
             piu.setEnergyLevel(piu.getEnergyLevel()+5000);
         }
     }
