@@ -21,6 +21,9 @@ public class CircleObject extends GameObject {
         angle =0;
         angleVelocity = 0.00;
     }
+    public void  setAngle(double angle){
+        this.angle = angle;
+    }
     public double getAngle(){
         return angle;
     }

@@ -14,7 +14,6 @@ public class PiuDeadBehaviour implements IPiuBehaviour {
 
     @Override
     public void tick() {
-
     }
 
     @Override

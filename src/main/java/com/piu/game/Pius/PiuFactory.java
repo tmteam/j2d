@@ -7,6 +7,10 @@ import com.piu.game.Levels.GenerationLevel;
 public class PiuFactory {
 
     private final NeuralBrain brain;
+
+    public static PiuFactory createFor(PerceptronSettings settings){
+        return new PiuFactory(new NeuralBrain(new Perceptron(settings)));
+    }
     public static PiuFactory createRandom( int[] layersConfig){
         return new PiuFactory(new NeuralBrain(new Perceptron(PerceptronSettings.createRandom(layersConfig))));
     }

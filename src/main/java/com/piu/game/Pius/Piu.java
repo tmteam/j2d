@@ -1,8 +1,11 @@
 package com.piu.game.Pius;
 
+import com.piu.engine.Collisions.CollisionTools;
 import com.piu.engine.GameObject;
+import com.piu.engine.GameObjects.RectangleObject;
 import com.piu.engine.ShiftableCanvas;
 import com.piu.engine.GameObjects.CircleObject;
+import com.piu.game.Donut;
 import com.piu.game.Levels.GenerationLevel;
 
 import java.awt.*;
@@ -13,7 +16,7 @@ public class Piu extends CircleObject {
 
     private double energyLevel = 100000;
 
-    private static final int minimumRadius = 40;
+    private static final int minimumRadius = 20;
 
     private IPiuBehaviour currentBehaviour;
 
@@ -47,6 +50,8 @@ public class Piu extends CircleObject {
             handler.notifyPiusDeath(this);
         }
         angleVelocity *= 0.99;
+        this.velX *= 0.999;
+        this.velY *= 0.999;
         radius = getCurrentRadius();
         super.tick();
 
@@ -55,7 +60,14 @@ public class Piu extends CircleObject {
     public void render(ShiftableCanvas g) {
         currentBehaviour.render(g, radius,angle);
     }
+    @Override
+    public boolean tryCollideWith(GameObject o){
 
+        if(o instanceof Donut){
+            return true;
+        }
+        return super.tryCollideWith(o);
+    }
 
     @Override
     public void afterCollisionWith(GameObject o){
@@ -65,5 +77,9 @@ public class Piu extends CircleObject {
     private int getCurrentRadius(){
 
         return minimumRadius+  (int)(Math.sqrt(energyLevel)/5);
+    }
+
+    public IPivaBrain getBrain() {
+        return brain;
     }
 }

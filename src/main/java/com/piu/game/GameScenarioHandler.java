@@ -7,6 +7,7 @@ import com.piu.engine.IHandler;
 import com.piu.engine.ILevelHandler;
 import com.piu.engine.IMainHandler;
 import com.piu.engine.Keyboard.CamerMoverConcreteKeyHandler;
+import com.piu.engine.Keyboard.IKeyConcreteHandler;
 import com.piu.engine.Keyboard.KeyHandler;
 import com.piu.engine.WorldMap;
 import com.piu.game.Levels.GenerationLevel;
@@ -17,27 +18,43 @@ import java.awt.*;
 public class GameScenarioHandler implements IMainHandler {
 
     private final Hid hid;
-    private final ManualCamera camera;
     private ILevelHandler levelHandler;
     private int width;
     private int height;
-
+    private KeyHandler keyHandler;
     public GameScenarioHandler(){
+
+        keyHandler = new KeyHandler();
 
         this.hid = new Hid(0,0);
 
-        camera = new ManualCamera();
 
-        WorldMap map = new WorldMap(6000,6000, new WallDescription[]{
-                new WallDescription(500,500,20,400)
+        WorldMap map = new WorldMap(14000,14000, new WallDescription[]{
+                new WallDescription(500,900,20,5000),
+                new WallDescription(500,1900,20,5000),
+
+                new WallDescription(8000,500,1000,40),
+
+                new WallDescription(8200,900,1000,40),
+
+                new WallDescription(6000,6000,2000,2000),
+                new WallDescription(8000,900,40,2000),
+                new WallDescription(10000,10000,3000,30),
+                new WallDescription(900,8000,20,3000),
+
+                new WallDescription(10000,3000,2000,2000),
+                new WallDescription(10000,900,40,2000),
         });
 
         int piuCount = 150;
         PiuFactory[] pius = new PiuFactory[150];
         for (int i = 0; i < piuCount; i++) {
-            pius[i] = PiuFactory.createRandom(new int[]{19,8,3});
+            pius[i] = PiuFactory.createRandom(new int[]{19, 19, 8,3});
         }
-        levelHandler = new GenerationLevel(camera,hid,map,  pius, 150 );
+        levelHandler = new GenerationLevel(1,hid,map,  pius, 200 );
+        IKeyConcreteHandler kh = levelHandler.getKeyHandlerOrNull();
+        if(kh!=null)
+            keyHandler.subscribe(kh);
         // HumanBrain player = new HumanBrain();
         //handler.addObjectAtRandomFreePlace(new Piu(300,300,player, handler));
     }
@@ -53,8 +70,18 @@ public class GameScenarioHandler implements IMainHandler {
     public void tick() {
         levelHandler.tick();
         if(levelHandler.IsLevelDone()){
+            IKeyConcreteHandler kh = levelHandler.getKeyHandlerOrNull();
+
+            if(kh!=null)
+                keyHandler.unsubscribe(kh);
             levelHandler = levelHandler.getNextLevel();
+
+            IKeyConcreteHandler nh = levelHandler.getKeyHandlerOrNull();
+            if(nh!=null)
+                keyHandler.subscribe(nh);
+
             levelHandler.setScreenSize(width,height);
+
         }
     }
 
@@ -65,8 +92,6 @@ public class GameScenarioHandler implements IMainHandler {
 
     @Override
     public KeyHandler getKeyHandlerOrNull() {
-        KeyHandler keyHandler = new KeyHandler();
-        keyHandler.subscribe(new CamerMoverConcreteKeyHandler(camera));
         return keyHandler;
     }
 
@@ -77,6 +102,6 @@ public class GameScenarioHandler implements IMainHandler {
 
     @Override
     public int getPreferedTps() {
-        return 200;
+        return 250;
     }
 }

@@ -16,10 +16,10 @@ public class PiuAliveBehaviour implements IPiuBehaviour {
     private double throttleLevel;
     private double turnLevel;
 
-    private final double throttleCoast = 40;
+    private final double throttleCoast = 8;
     private final double breakCoast = 10;
-    private final double turnCoast = 100;
-    private final double tickCoast = 20;
+    private final double turnCoast = 200;
+    public static final double tickCoast = 30;
 
     private final float visionLenght = 800;
     private  boolean isAlive = true;
@@ -176,7 +176,7 @@ public class PiuAliveBehaviour implements IPiuBehaviour {
     public void afterCollisionWith(GameObject o){
         if(o instanceof Donut){
             handler.donutEaten((Donut)o);
-            piu.setEnergyLevel(piu.getEnergyLevel()+5000);
+            piu.setEnergyLevel(piu.getEnergyLevel()+15000);
         }
     }
 }

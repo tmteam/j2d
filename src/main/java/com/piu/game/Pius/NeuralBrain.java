@@ -1,6 +1,7 @@
 package com.piu.game.Pius;
 
 import com.neural.Perceptron;
+import com.neural.PerceptronSettings;
 
 public class NeuralBrain implements IPivaBrain {
 
@@ -12,6 +13,9 @@ public class NeuralBrain implements IPivaBrain {
     public NeuralBrain(com.neural.Perceptron perceptron){
 
         this.perceptron = perceptron;
+    }
+    public PerceptronSettings getSettings(){
+        return perceptron.getSettings();
     }
     @Override
     public void tick(CurrentInput input) {

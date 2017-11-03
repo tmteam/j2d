@@ -18,6 +18,7 @@ public class Hid implements IRenderable {
     private int lastGenDonnutsEaten;
     private int lastGenMedian;
     private int lastGenAverage;
+    private int bestEver;
 
     public Hid(int top, int left){
 
@@ -30,6 +31,7 @@ public class Hid implements IRenderable {
         this.lastGenDonnutsEaten = donutsEaten;
         this.lastGenAverage = average;
         this.lastGenMedian = median;
+        bestEver =  Math.max(bestFit, bestEver);
     }
     public void  SetCurrentGameInfo(int donnutsCount, int piusCount,int generationTick){
 
@@ -46,25 +48,27 @@ public class Hid implements IRenderable {
     public void render(Graphics g){
 
         g.setColor(Color.black);
-        g.fillRect(top,left,100,300);
+        g.fillRect(top,left,100,280);
         g.setColor(Color.darkGray);
         ((Graphics2D)g).setStroke(new BasicStroke(4f));
-        g.drawRect(top,left,100,300);
+        g.drawRect(top,left,100,280);
         g.setColor(Color.WHITE);
 
         drawStrings(g, left+15, top+20,new String[]{
                 "fps: "+ fps,
                 "tps: "+ tps,
                 "------------",
+                "gen: "+ (int)(previousGen+1),
                 "ticks: "+ ticks,
                 "donuts: "+ donnutsCount,
                 "pius: "+ piusCount,
                 "------------",
-                "gen: "+ previousGen,
                 "best: "+ lastGenBestFit,
                 "average: "+ lastGenAverage,
                 "median: "+ lastGenMedian,
-                "eaten: "+ lastGenDonnutsEaten,
+                "------------",
+                "bestever: "+ bestEver,
+
         });
     }
     private void drawStrings(Graphics g, int left, int top, String[] lines ){

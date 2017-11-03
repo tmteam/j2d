@@ -25,6 +25,10 @@ public class Perceptron {
         }
     }
 
+    public PerceptronSettings getSettings() {
+        return settings;
+    }
+
     public double[] calc(double[] inputs) {
 
         double[] weights = settings.getWeights();
