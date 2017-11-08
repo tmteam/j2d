@@ -1,5 +1,7 @@
 package com.piu.game;
 
+import com.genetics.SingleGenomCombinedMutator;
+import com.neural.PerceptronSettings;
 import com.piu.engine.Cameras.ICamera;
 import com.piu.engine.Cameras.ManualCamera;
 import com.piu.engine.GameObjects.WallDescription;
@@ -48,8 +50,18 @@ public class GameScenarioHandler implements IMainHandler {
 
         int piuCount = 150;
         PiuFactory[] pius = new PiuFactory[150];
+        SingleGenomCombinedMutator mutator = new SingleGenomCombinedMutator();
+
+        int[] layers = new int[]{19, 19, 8,3};
         for (int i = 0; i < piuCount; i++) {
-            pius[i] = PiuFactory.createRandom(new int[]{19, 19, 8,3});
+            PerceptronSettings ps = PerceptronSettings.createRandom(layers);
+
+            double[] genom =  ps.toGenom();
+            for (int j = 0; j < 20; j++) {
+                mutator.mutate(genom);
+            }
+
+            pius[i] = PiuFactory.createFor(PerceptronSettings.create(layers, genom));
         }
         levelHandler = new GenerationLevel(1,hid,map,  pius, 200 );
         IKeyConcreteHandler kh = levelHandler.getKeyHandlerOrNull();

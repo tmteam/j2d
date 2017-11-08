@@ -45,10 +45,8 @@ public class GenderPopulationMutator implements PopulationMutator {
                 g2 = father.getGenomCopy();
             }
 
-           // new GausianMutator(0.01).mutate(g1);
-            new SoftGausianMutator(0.05,0.1).mutate(g2);
-
-            new FatalMutator(0.01).mutate(g2);
+            new SingleGenomCombinedMutator().mutate(g2);
+            new SingleGenomCombinedMutator().mutate(g1);
 
             newPopulation.add(new Genom(g1));
             newPopulation.add(new Genom(g2));

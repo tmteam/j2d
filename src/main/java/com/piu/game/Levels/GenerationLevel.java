@@ -80,7 +80,7 @@ public class GenerationLevel implements ISurfaceWorldHandler, ILevelHandler {
             for (Piu p :alivePius) {
                 results.add(new PiuResult(p,generationLength+(p.getEnergyLevel()/ PiuAliveBehaviour.tickCoast)));
             }
-            generationResults = new GenerationResults( results,generationNum,generationLength);
+            generationResults = new GenerationResults( results,generationNum,generationLength,donutEatenCount,donutCount);
         }
     }
 
@@ -107,10 +107,11 @@ public class GenerationLevel implements ISurfaceWorldHandler, ILevelHandler {
         handler.addObjectAtRandomFreePlace(new Donut(0,0, 50, 0));
         donutCount++;
     }
-
+    int donutEatenCount;
     public void donutEaten(Donut donut){
         removeObject(donut);
         donutCount--;
+        donutEatenCount++;
     }
 
     public CollideLineResult collideLine(GameObject except, float x1, float y1, float angle, float lenght){

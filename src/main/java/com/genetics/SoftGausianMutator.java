@@ -1,5 +1,6 @@
 package com.genetics;
 
+import java.lang.reflect.Array;
 import java.util.Random;
 
 public class SoftGausianMutator implements IMutator {
@@ -14,9 +15,15 @@ public class SoftGausianMutator implements IMutator {
 
     @Override
     public void mutate(double[] genom) {
-        for (int i = 0; i < genom.length; i++) {
-            if(r.nextDouble()>=1-pOfMutation)
-                genom[i]+= r.nextGaussian()*amplitude;
-        }
+        int len = r.nextInt((genom.length-2)/8+1);
+
+        int start1 = r.nextInt(genom.length-len -1);
+        int start2 = r.nextInt(genom.length-len -1);
+
+        double[] buff = new double[len];
+
+        System.arraycopy(genom, start1,buff ,0,len);
+        System.arraycopy(genom, start2,genom,start1,len);
+        System.arraycopy(buff,0, genom, start2,len);
     }
 }

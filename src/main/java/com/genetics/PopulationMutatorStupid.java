@@ -18,7 +18,7 @@ public class PopulationMutatorStupid implements PopulationMutator {
             double[] genom1 = genom.getGenomCopy();
             double[] genom2 = genom.getGenomCopy();
 
-            new GausianMutator(0.05).mutate(genom1);
+            new GausianMutator(0.05,0.5).mutate(genom1);
             new FatalMutator(0.05).mutate(genom2);
 
             if (generated >= populationSize)
